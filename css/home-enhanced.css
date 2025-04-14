@@ -1,0 +1,321 @@
+/* تنسيقات إضافية للصفحة الرئيسية */
+
+/* تنسيقات قسم الترحيب */
+.hero {
+    position: relative;
+    min-height: 600px;
+    background: linear-gradient(135deg, #1e5799, #207cca, #2989d8, #1e5799);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.bismillah {
+    margin-bottom: 30px;
+}
+
+.bismillah h1 {
+    font-size: 2.8rem;
+    font-family: 'Traditional Arabic', 'Amiri', serif;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    letter-spacing: 1px;
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+    to {
+        text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.5);
+    }
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.primary-btn {
+    background-color: #27ae60;
+    color: white;
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
+}
+
+.primary-btn:hover {
+    background-color: #2ecc71;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(39, 174, 96, 0.6);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.secondary-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.hero-features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.hero-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 10px;
+    width: 150px;
+    transition: all 0.3s ease;
+}
+
+.hero-feature:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.hero-feature i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #2ecc71;
+}
+
+.hero-feature span {
+    font-size: 0.9rem;
+}
+
+/* تنسيقات للأجهزة المحمولة */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 500px;
+        padding: 60px 0;
+    }
+    
+    .bismillah img {
+        max-width: 250px;
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero-features {
+        gap: 15px;
+    }
+    
+    .hero-feature {
+        width: 120px;
+        padding: 15px;
+    }
+}
+
+/* تنسيقات قسم المقالات */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.article-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.article-icon {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.article-icon-fiqh {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+}
+
+.article-icon-aqeedah {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.article-icon-seerah {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.icon-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.article-card:hover .icon-text {
+    transform: scale(1.2);
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+.article-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.article-category {
+    background-color: #f1f1f1;
+    padding: 3px 10px;
+    border-radius: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.article-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    color: #333;
+}
+
+.article-card p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.read-more {
+    align-self: flex-start;
+    color: #27ae60;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.read-more:hover {
+    color: #2ecc71;
+}
+
+.read-more i {
+    font-size: 0.8rem;
+}
+
+/* تأثيرات إضافية */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content {
+    animation: fadeIn 1.5s ease-out;
+}

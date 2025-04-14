@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتجاه القبلة | بصائر - تحديد اتجاه الكعبة المشرفة</title>
+    <meta name="description" content="تحديد اتجاه القبلة بدقة باستخدام البوصلة الإلكترونية، معرفة اتجاه الكعبة المشرفة من موقعك الحالي بطريقة سهلة ودقيقة">
+    <meta name="keywords" content="اتجاه القبلة، بوصلة القبلة، تحديد القبلة، الكعبة المشرفة، اتجاه الصلاة، بصائر">
+    <meta name="author" content="سالم رزق">
+    <meta property="og:title" content="اتجاه القبلة | بصائر - تحديد اتجاه الكعبة المشرفة">
+    <meta property="og:description" content="تحديد اتجاه القبلة بدقة باستخدام البوصلة الإلكترونية، معرفة اتجاه الكعبة المشرفة من موقعك الحالي بطريقة سهلة ودقيقة">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://basaer-islamic.com/qibla.html">
+    <meta property="og:image" content="https://basaer-islamic.com/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="اتجاه القبلة | بصائر - تحديد اتجاه الكعبة المشرفة">
+    <meta name="twitter:description" content="تحديد اتجاه القبلة بدقة باستخدام البوصلة الإلكترونية، معرفة اتجاه الكعبة المشرفة من موقعك الحالي بطريقة سهلة ودقيقة">
+    <link rel="canonical" href="https://basaer-islamic.com/qibla.html">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/qibla.css">
+    <link rel="stylesheet" href="css/enhanced-header.css">
+    <link rel="stylesheet" href="css/enhanced-buttons.css">
+    <link rel="stylesheet" href="css/enhanced-backgrounds.css">
+    <link rel="stylesheet" href="css/enhanced-qibla.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/mobile-enhancements.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/touch-enhancements.css">
+</head>
+<body class="qibla-page">
+    <!-- القسم العلوي -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-mosque"></i>
+                <h1>بصائر</h1>
+            </div>
+            <button class="menu-toggle" aria-label="تبديل القائمة" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                    <li><a href="index.html#quran"><i class="fas fa-book-quran"></i> القرآن الكريم</a></li>
+                    <li><a href="index.html#prayer"><i class="fas fa-clock"></i> مواقيت الصلاة</a></li>
+                    <li><a href="index.html#hadith"><i class="fas fa-scroll"></i> الأحاديث</a></li>
+                    <li><a href="index.html#azkar"><i class="fas fa-pray"></i> الأذكار</a></li>
+                    <li><a href="qibla.html" class="active"><i class="fas fa-compass"></i> القبلة</a></li>
+                    <li><a href="articles.html"><i class="fas fa-newspaper"></i> المقالات</a></li>
+                    <li><a href="fatawa.html"><i class="fas fa-gavel"></i> الفتاوى</a></li>
+                    <li><a href="tasbih.html"><i class="fas fa-hands-praying"></i> المسبحة</a></li>
+                    <li><a href="quiz.html"><i class="fas fa-graduation-cap"></i> اختبر معلوماتك</a></li>
+                    <li><a href="settings.html"><i class="fas fa-cog"></i> الإعدادات</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- قسم اتجاه القبلة -->
+    <section class="qibla-section">
+        <div class="container">
+            <h2 class="section-title">اتجاه القبلة</h2>
+            <div class="qibla-container">
+                <div class="qibla-info">
+                    <h3>تحديد اتجاه القبلة من موقعك</h3>
+                    <p>اضغط على زر "تحديد موقعي" للحصول على اتجاه القبلة بناءً على موقعك الحالي.</p>
+                    <div class="location-details">
+                        <p><strong>الموقع الحالي:</strong> <span id="current-location">غير محدد</span></p>
+                        <p><strong>خط العرض:</strong> <span id="latitude">--</span></p>
+                        <p><strong>خط الطول:</strong> <span id="longitude">--</span></p>
+                        <p><strong>اتجاه القبلة:</strong> <span id="qibla-direction">--</span></p>
+                        <button id="get-location" class="btn">تحديد موقعي</button>
+                    </div>
+                </div>
+                <div class="qibla-compass">
+                    <div class="compass-container">
+                        <div class="compass-ring"></div>
+                        <div class="compass-arrow" id="compass-arrow"></div>
+                        <div class="compass-center"></div>
+                        <div class="compass-directions">
+                            <span class="direction north">ش</span>
+                            <span class="direction east">ش</span>
+                            <span class="direction south">ج</span>
+                            <span class="direction west">غ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="qibla-instructions">
+                <h3>كيفية استخدام البوصلة</h3>
+                <ol>
+                    <li>اضغط على زر "تحديد موقعي" للسماح للموقع بالوصول إلى موقعك الجغرافي.</li>
+                    <li>سيتم حساب اتجاه القبلة بناءً على موقعك الحالي.</li>
+                    <li>سيشير السهم الأحمر في البوصلة إلى اتجاه القبلة.</li>
+                    <li>قم بتدوير هاتفك أو جهازك حتى يشير السهم الأحمر نحو الكعبة المشرفة.</li>
+                </ol>
+                <div class="qibla-note">
+                    <p><strong>ملاحظة:</strong> تعمل هذه الميزة بشكل أفضل على الأجهزة المحمولة التي تحتوي على مستشعر البوصلة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- القسم السفلي -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>بصائر</h2>
+                    <p>موقع إسلامي شامل للقرآن الكريم والأحاديث النبوية والأذكار ومواقيت الصلاة</p>
+                </div>
+                <div class="footer-links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="index.html#quran">القرآن الكريم</a></li>
+                        <li><a href="index.html#prayer">مواقيت الصلاة</a></li>
+                        <li><a href="index.html#hadith">الأحاديث النبوية</a></li>
+                        <li><a href="index.html#azkar">الأذكار</a></li>
+                        <li><a href="qibla.html">اتجاه القبلة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>تواصل معنا</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> salmbrykrzq@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>تابعنا</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/share/1CtncPzj4R/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.youtube.com/@SALEM.R" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="https://wa.me/+201208569475" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 بصائر. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/qibla.js"></script>
+    <script src="js/mobile-menu.js"></script>
+</body>
+</html>

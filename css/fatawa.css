@@ -1,0 +1,308 @@
+/* تنسيقات صفحة الفتاوى الإسلامية */
+
+.fatawa-section {
+    padding: 80px 0;
+    background-color: var(--bg-color, #f8f8f8);
+}
+
+/* رأس قسم الفتاوى */
+.fatawa-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.search-container {
+    display: flex;
+    max-width: 400px;
+    width: 100%;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color, #ddd);
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+}
+
+.search-container button {
+    background-color: var(--primary-color, #4caf50);
+    color: white;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+    background-color: var(--secondary-color, #2e7d32);
+}
+
+.filter-options {
+    display: flex;
+    gap: 15px;
+}
+
+.filter-options select {
+    padding: 12px 15px;
+    border: 1px solid var(--border-color, #ddd);
+    border-radius: 4px;
+    background-color: var(--card-bg, #fff);
+    color: var(--text-color, #333);
+    cursor: pointer;
+    min-width: 150px;
+}
+
+/* قائمة الفتاوى */
+.fatawa-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.fatwa-card {
+    background-color: var(--card-bg, #fff);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px var(--shadow-color, rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.fatwa-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--shadow-color, rgba(0, 0, 0, 0.15));
+}
+
+.fatwa-header {
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color, #ddd);
+}
+
+.fatwa-title {
+    margin: 0 0 15px 0;
+    font-size: 1.3rem;
+    color: var(--text-color, #333);
+}
+
+.fatwa-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.fatwa-category, .fatwa-scholar {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.fatwa-category {
+    background-color: var(--primary-color, #4caf50);
+    color: white;
+}
+
+.fatwa-scholar {
+    background-color: var(--hover-color, #e8f5e9);
+    color: var(--primary-color, #4caf50);
+}
+
+.fatwa-content {
+    padding: 20px;
+}
+
+.fatwa-question, .fatwa-answer {
+    margin-bottom: 20px;
+}
+
+.fatwa-question h4, .fatwa-answer h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: var(--primary-color, #4caf50);
+}
+
+.fatwa-question p, .fatwa-answer p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.fatwa-reference {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+    padding-top: 15px;
+    border-top: 1px dashed var(--border-color, #ddd);
+}
+
+.fatwa-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--bg-color, #f8f8f8);
+    border-top: 1px solid var(--border-color, #ddd);
+}
+
+.fatwa-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.fatwa-actions .btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.share-btn {
+    background-color: transparent;
+    color: #2196f3;
+    border: 1px solid #2196f3;
+}
+
+.share-btn:hover {
+    background-color: #2196f3;
+    color: white;
+}
+
+.save-btn {
+    background-color: transparent;
+    color: var(--primary-color, #4caf50);
+    border: 1px solid var(--primary-color, #4caf50);
+}
+
+.save-btn:hover {
+    background-color: var(--primary-color, #4caf50);
+    color: white;
+}
+
+.fatwa-date {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* زر تحميل المزيد */
+.load-more {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.load-more .btn {
+    padding: 12px 30px;
+    background-color: transparent;
+    color: var(--primary-color, #4caf50);
+    border: 1px solid var(--primary-color, #4caf50);
+    transition: all 0.3s;
+}
+
+.load-more .btn:hover {
+    background-color: var(--primary-color, #4caf50);
+    color: white;
+}
+
+/* قسم طلب فتوى جديدة */
+.request-fatwa {
+    background-color: var(--card-bg, #fff);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--shadow-color, rgba(0, 0, 0, 0.1));
+    margin-bottom: 40px;
+}
+
+.request-fatwa h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--primary-color, #4caf50);
+}
+
+.request-fatwa p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-color, #333);
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color, #ddd);
+    border-radius: 4px;
+    background-color: var(--bg-color, #f8f8f8);
+    color: var(--text-color, #333);
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.form-actions .btn {
+    padding: 12px 30px;
+}
+
+/* تحسينات للأجهزة المحمولة */
+@media (max-width: 992px) {
+    .fatawa-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-container {
+        max-width: 100%;
+    }
+    
+    .filter-options {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .fatwa-footer {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .fatwa-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 576px) {
+    .fatwa-meta {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    .form-actions .btn {
+        width: 100%;
+    }
+}

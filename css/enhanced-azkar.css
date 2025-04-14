@@ -1,0 +1,276 @@
+/* تنسيقات محسنة لقسم الأذكار */
+
+/* تنسيق عام لقسم الأذكار */
+.azkar-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, 
+        rgba(0, 87, 61, 0.08) 0%, 
+        rgba(13, 58, 101, 0.08) 50%, 
+        rgba(0, 87, 61, 0.08) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* إضافة تأثير الموجات في خلفية القسم */
+.azkar-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, 
+        rgba(0, 87, 61, 0.05) 0%, 
+        rgba(13, 58, 101, 0.05) 50%, 
+        rgba(0, 87, 61, 0.05) 100%);
+    z-index: 0;
+}
+
+/* تبويبات الأذكار */
+.azkar-tabs {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.azkar-tab {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 87, 61, 0.1);
+    padding: 12px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.azkar-tab:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.azkar-tab.active {
+    background: linear-gradient(135deg, #00573d, #0d3a65);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 5px 15px rgba(0, 87, 61, 0.2);
+}
+
+/* محتوى الأذكار */
+.azkar-content {
+    position: relative;
+    z-index: 1;
+}
+
+.azkar-tab-content {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 87, 61, 0.1);
+    border: 1px solid rgba(0, 87, 61, 0.1);
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.azkar-tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* بطاقة الذكر */
+.zikr-card {
+    position: relative;
+    padding: 25px 30px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 87, 61, 0.1);
+    transition: transform 0.4s ease;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid rgba(0, 87, 61, 0.1);
+    margin-bottom: 20px;
+}
+
+/* الإطار المضيء للبطاقة */
+.zikr-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(0, 87, 61, 0.03) 0%,
+        rgba(13, 58, 101, 0.05) 100%);
+    z-index: -1;
+}
+
+/* الحدود الثابتة للبطاقة */
+.zikr-card::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, 
+        #00573d 0%, 
+        #0d3a65 100%);
+    z-index: -2;
+    border-radius: 16px;
+    opacity: 0.2;
+}
+
+.zikr-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 87, 61, 0.15);
+}
+
+/* زخرفة إسلامية في الخلفية */
+.zikr-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/islamic-pattern.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.02;
+    z-index: -1;
+}
+
+/* نص الذكر */
+.zikr-text {
+    position: relative;
+    font-size: 1.7rem;
+    line-height: 2.2;
+    margin-bottom: 15px;
+    color: #000;
+    font-family: 'Scheherazade New', 'Amiri', 'Noto Naskh Arabic', serif;
+    font-weight: 600;
+    text-align: justify;
+    text-align-last: center;
+    letter-spacing: 0.4px;
+    word-spacing: 2px;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.zikr-text p {
+    position: relative;
+    padding: 0 15px;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    font-feature-settings: "kern", "liga", "calt";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* عدد مرات الذكر */
+.zikr-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 87, 61, 0.1);
+}
+
+.zikr-count span {
+    background: linear-gradient(135deg, #00573d, #0d3a65);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 600;
+    box-shadow: 0 3px 8px rgba(0, 87, 61, 0.2);
+}
+
+/* إضافة أزرار عداد التسبيح */
+.zikr-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.counter-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00573d, #0d3a65);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 87, 61, 0.2);
+}
+
+.counter-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 87, 61, 0.3);
+}
+
+.counter-value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #00573d;
+}
+
+.counter-reset {
+    background: linear-gradient(135deg, #8a6e27, #d4af37);
+}
+
+/* تنسيقات للأجهزة المحمولة */
+@media (max-width: 768px) {
+    .azkar-tab {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .azkar-tab-content {
+        padding: 20px 15px;
+    }
+    
+    .zikr-card {
+        padding: 20px;
+    }
+    
+    .zikr-text {
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 480px) {
+    .azkar-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .azkar-tab {
+        width: 80%;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المسبحة الإلكترونية | بصائر - أداة للتسبيح والذكر</title>
+    <meta name="description" content="المسبحة الإلكترونية من موقع بصائر، أداة سهلة الاستخدام للتسبيح والذكر، تساعدك على إحصاء الأذكار والتسبيحات بطريقة إلكترونية مع إمكانية تخصيص الأذكار">
+    <meta name="keywords" content="مسبحة إلكترونية، سبحة، تسبيح، ذكر، أذكار، عداد التسبيح، بصائر">
+    <meta name="author" content="سالم رزق">
+    <meta property="og:title" content="المسبحة الإلكترونية | بصائر">
+    <meta property="og:description" content="المسبحة الإلكترونية من موقع بصائر، أداة سهلة الاستخدام للتسبيح والذكر، تساعدك على إحصاء الأذكار والتسبيحات بطريقة إلكترونية مع إمكانية تخصيص الأذكار">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://basaer-islamic.com/tasbih.html">
+    <meta property="og:image" content="https://basaer-islamic.com/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="المسبحة الإلكترونية | بصائر">
+    <meta name="twitter:description" content="المسبحة الإلكترونية من موقع بصائر، أداة سهلة الاستخدام للتسبيح والذكر، تساعدك على إحصاء الأذكار والتسبيحات بطريقة إلكترونية مع إمكانية تخصيص الأذكار">
+    <link rel="canonical" href="https://basaer-islamic.com/tasbih.html">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/tasbih.css">
+    <link rel="stylesheet" href="css/enhanced-tasbih.css">
+    <link rel="stylesheet" href="css/enhanced-header.css">
+    <link rel="stylesheet" href="css/enhanced-buttons.css">
+    <link rel="stylesheet" href="css/enhanced-backgrounds.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <link rel="stylesheet" href="css/mobile-enhancements.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/touch-enhancements.css">
+</head>
+<body class="tasbih-page">
+    <!-- القسم العلوي -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-mosque"></i>
+                <h1>بصائر</h1>
+            </div>
+            <button class="menu-toggle" aria-label="تبديل القائمة" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                    <li><a href="index.html#quran"><i class="fas fa-book-quran"></i> القرآن الكريم</a></li>
+                    <li><a href="index.html#prayer"><i class="fas fa-clock"></i> مواقيت الصلاة</a></li>
+                    <li><a href="index.html#hadith"><i class="fas fa-scroll"></i> الأحاديث</a></li>
+                    <li><a href="index.html#azkar"><i class="fas fa-pray"></i> الأذكار</a></li>
+                    <li><a href="qibla.html"><i class="fas fa-compass"></i> القبلة</a></li>
+                    <li><a href="articles.html"><i class="fas fa-newspaper"></i> المقالات</a></li>
+                    <li><a href="fatawa.html"><i class="fas fa-gavel"></i> الفتاوى</a></li>
+                    <li><a href="tasbih.html" class="active"><i class="fas fa-hands-praying"></i> المسبحة</a></li>
+                    <li><a href="quiz.html"><i class="fas fa-graduation-cap"></i> اختبر معلوماتك</a></li>
+                    <li><a href="settings.html"><i class="fas fa-cog"></i> الإعدادات</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- قسم المسبحة -->
+    <section class="tasbih-section">
+        <div class="container">
+            <h2 class="section-title">المسبحة الإلكترونية</h2>
+            <div class="tasbih-container">
+                <div class="tasbih-display">
+                    <div class="tasbih-count" id="tasbih-count">0</div>
+                    <div class="tasbih-total" id="tasbih-total">المجموع: 0</div>
+                </div>
+                
+                <div class="tasbih-beads">
+                    <div class="tasbih-bead" id="tasbih-bead"></div>
+                </div>
+                
+                <div class="tasbih-controls">
+                    <button id="tasbih-button" class="tasbih-button">
+                        <i class="fas fa-hand-pointer"></i>
+                        <span>اضغط للتسبيح</span>
+                    </button>
+                    
+                    <div class="tasbih-actions">
+                        <button id="reset-button" class="action-button" title="إعادة تعيين العداد">
+                            <i class="fas fa-redo"></i>
+                        </button>
+                        <button id="save-button" class="action-button" title="حفظ العدد الحالي">
+                            <i class="fas fa-save"></i>
+                        </button>
+                        <button id="vibrate-toggle" class="action-button" title="تفعيل/إيقاف الاهتزاز">
+                            <i class="fas fa-mobile-alt"></i>
+                        </button>
+                        <button id="sound-toggle" class="action-button" title="تفعيل/إيقاف الصوت">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="tasbih-presets">
+                    <h3>أذكار مختارة</h3>
+                    <div class="preset-buttons">
+                        <button class="preset-button" data-target="33" data-dhikr="سبحان الله">
+                            سبحان الله (33)
+                        </button>
+                        <button class="preset-button" data-target="33" data-dhikr="الحمد لله">
+                            الحمد لله (33)
+                        </button>
+                        <button class="preset-button" data-target="33" data-dhikr="الله أكبر">
+                            الله أكبر (33)
+                        </button>
+                        <button class="preset-button" data-target="100" data-dhikr="لا إله إلا الله">
+                            لا إله إلا الله (100)
+                        </button>
+                        <button class="preset-button" data-target="100" data-dhikr="أستغفر الله">
+                            أستغفر الله (100)
+                        </button>
+                        <button class="preset-button" data-target="100" data-dhikr="اللهم صل على محمد">
+                            اللهم صل على محمد (100)
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="tasbih-history">
+                    <h3>سجل التسبيح</h3>
+                    <div class="history-list" id="history-list">
+                        <!-- سيتم إضافة السجلات هنا بواسطة JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- القسم السفلي -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>بصائر</h3>
+                    <p>موقع إسلامي شامل يقدم محتوى متنوع للمسلمين في جميع أنحاء العالم.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/1CtncPzj4R/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@SALEM.R" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                        <a href="https://wa.me/+201208569475" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="index.html#quran">القرآن الكريم</a></li>
+                        <li><a href="index.html#prayer">مواقيت الصلاة</a></li>
+                        <li><a href="index.html#hadith">الأحاديث</a></li>
+                        <li><a href="index.html#azkar">الأذكار</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>خدمات إضافية</h3>
+                    <ul>
+                        <li><a href="qibla.html">القبلة</a></li>
+                        <li><a href="articles.html">المقالات الإسلامية</a></li>
+                        <li><a href="tasbih.html">المسبحة الإلكترونية</a></li>
+                        <li><a href="settings.html">الإعدادات</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 بصائر. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ملفات JavaScript -->
+    <script src="js/script.js"></script>
+    <script src="js/tasbih.js"></script>
+    <script src="js/mobile-menu.js"></script>
+</body>
+</html>

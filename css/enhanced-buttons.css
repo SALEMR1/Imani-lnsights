@@ -1,0 +1,817 @@
+/**
+ * تحسينات الأزرار - الموقع الإسلامي المتكامل
+ */
+
+/* أنماط الأزرار العامة */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    gap: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn i {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover i {
+    transform: scale(1.1);
+}
+
+/* أنماط الأزرار الأساسية */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-color-dark));
+    color: white;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--primary-color-dark), var(--primary-color));
+}
+
+.btn-primary:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.7s ease;
+}
+
+.btn-primary:hover:before {
+    left: 100%;
+}
+
+/* أنماط الأزرار الثانوية */
+.btn-secondary {
+    background: linear-gradient(135deg, var(--secondary-color), var(--secondary-color-dark));
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, var(--secondary-color-dark), var(--secondary-color));
+}
+
+.btn-secondary:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.7s ease;
+}
+
+.btn-secondary:hover:before {
+    left: 100%;
+}
+
+/* أنماط الأزرار المحايدة */
+.btn-neutral {
+    background: white;
+    color: var(--text-color);
+    border: 1px solid #e0e0e0;
+}
+
+.btn-neutral:hover {
+    background: #f9f9f9;
+    border-color: #d0d0d0;
+}
+
+/* أنماط أزرار الخطر */
+.btn-danger {
+    background: linear-gradient(135deg, #ff5252, #d32f2f);
+    color: white;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(135deg, #d32f2f, #ff5252);
+}
+
+/* أنماط أزرار النجاح */
+.btn-success {
+    background: linear-gradient(135deg, #4caf50, #388e3c);
+    color: white;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #388e3c, #4caf50);
+}
+
+/* أنماط أزرار المعلومات */
+.btn-info {
+    background: linear-gradient(135deg, #2196f3, #1976d2);
+    color: white;
+}
+
+.btn-info:hover {
+    background: linear-gradient(135deg, #1976d2, #2196f3);
+}
+
+/* أنماط أزرار التحذير */
+.btn-warning {
+    background: linear-gradient(135deg, #ff9800, #f57c00);
+    color: white;
+}
+
+.btn-warning:hover {
+    background: linear-gradient(135deg, #f57c00, #ff9800);
+}
+
+/* أحجام الأزرار */
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.btn-lg {
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.btn-xl {
+    padding: 16px 32px;
+    font-size: 20px;
+    border-radius: 12px;
+}
+
+/* أزرار مستديرة */
+.btn-rounded {
+    border-radius: 50px;
+}
+
+/* أزرار دائرية */
+.btn-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-circle.btn-sm {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-circle.btn-lg {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-circle.btn-xl {
+    width: 60px;
+    height: 60px;
+}
+
+/* أزرار شفافة */
+.btn-outline {
+    background: transparent;
+    border: 2px solid;
+}
+
+.btn-outline-primary {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-outline-secondary {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* أزرار مع أيقونات */
+.btn-icon-right {
+    flex-direction: row-reverse;
+}
+
+/* أزرار العودة للأعلى */
+.btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* أزرار النافذة المنبثقة */
+.btn-modal-close {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.btn-modal-close:hover {
+    color: #333;
+}
+
+/* أزرار التبديل */
+.toggle-btn {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.toggle-btn input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background-color: var(--primary-color);
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(30px);
+}
+
+/* أزرار البحث */
+.search-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+    background: var(--primary-color-dark);
+    transform: scale(1.05);
+}
+
+/* أزرار التنقل */
+.nav-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--primary-color);
+}
+
+.nav-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* أزرار الصفحات */
+.pagination-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: white;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.pagination-btn:hover {
+    background: #f5f5f5;
+    border-color: #d0d0d0;
+}
+
+.pagination-btn.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* أزرار المشاركة */
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f5f5f5;
+    color: #666;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.share-btn:hover {
+    transform: translateY(-3px);
+}
+
+.share-btn.facebook:hover {
+    background: #3b5998;
+    color: white;
+}
+
+.share-btn.twitter:hover {
+    background: #1da1f2;
+    color: white;
+}
+
+.share-btn.whatsapp:hover {
+    background: #25d366;
+    color: white;
+}
+
+.share-btn.telegram:hover {
+    background: #0088cc;
+    color: white;
+}
+
+/* أزرار الإعجاب */
+.like-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background: #f5f5f5;
+    color: #666;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.like-btn:hover {
+    background: #e0e0e0;
+}
+
+.like-btn.active {
+    background: #ffebee;
+    color: #e53935;
+}
+
+.like-btn.active i {
+    color: #e53935;
+}
+
+/* أزرار التعليقات */
+.comment-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background: #f5f5f5;
+    color: #666;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.comment-btn:hover {
+    background: #e0e0e0;
+}
+
+/* أزرار الحفظ */
+.save-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background: #f5f5f5;
+    color: #666;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    background: #e0e0e0;
+}
+
+.save-btn.active {
+    background: #e8f5e9;
+    color: #43a047;
+}
+
+.save-btn.active i {
+    color: #43a047;
+}
+
+/* أزرار التنزيل */
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    background: var(--primary-color-dark);
+    transform: translateY(-2px);
+}
+
+.download-btn:active {
+    transform: translateY(1px);
+}
+
+/* أزرار الطباعة */
+.print-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: #f5f5f5;
+    color: #666;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.print-btn:hover {
+    background: #e0e0e0;
+}
+
+/* تعديلات الوضع المظلم */
+.dark-theme .btn-neutral {
+    background: #333;
+    color: #fff;
+    border-color: #444;
+}
+
+.dark-theme .btn-neutral:hover {
+    background: #444;
+    border-color: #555;
+}
+
+.dark-theme .pagination-btn {
+    background: #333;
+    color: #fff;
+    border-color: #444;
+}
+
+.dark-theme .pagination-btn:hover {
+    background: #444;
+    border-color: #555;
+}
+
+.dark-theme .share-btn,
+.dark-theme .like-btn,
+.dark-theme .comment-btn,
+.dark-theme .save-btn,
+.dark-theme .print-btn {
+    background: #333;
+    color: #ccc;
+}
+
+.dark-theme .share-btn:hover,
+.dark-theme .like-btn:hover,
+.dark-theme .comment-btn:hover,
+.dark-theme .save-btn:hover,
+.dark-theme .print-btn:hover {
+    background: #444;
+}
+
+.dark-theme .like-btn.active {
+    background: #4a2c2c;
+    color: #ff6b6b;
+}
+
+.dark-theme .save-btn.active {
+    background: #2c4a2c;
+    color: #66bb6a;
+}
+
+/* تحسينات لأزرار القائمة */
+nav ul li a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    background: rgba(var(--primary-color-rgb), 0.1);
+}
+
+nav ul li a.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+nav ul li a.active i {
+    color: white;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: var(--primary-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+nav ul li a:hover::after {
+    width: 80%;
+    opacity: 1;
+}
+
+nav ul li a.active::after {
+    width: 80%;
+    opacity: 1;
+}
+
+/* تحسينات أزرار الإعدادات */
+.settings-option .toggle-btn {
+    margin-right: 10px;
+}
+
+/* تحسينات خاصة بأزرار الإعدادات */
+.settings-actions .btn,
+.data-actions .btn {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+}
+
+.settings-actions .btn:hover,
+.data-actions .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.settings-actions .btn:active,
+.data-actions .btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.settings-actions .btn:before,
+.data-actions .btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.7s ease;
+}
+
+.settings-actions .btn:hover:before,
+.data-actions .btn:hover:before {
+    left: 100%;
+}
+
+.settings-nav li {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 14px;
+    transition: all 0.3s ease;
+}
+
+.settings-nav li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.settings-nav li.active {
+    box-shadow: 0 4px 15px rgba(var(--primary-color-rgb), 0.25);
+}
+
+/* تحسين مظهر عناصر التحكم في الإعدادات */
+.setting-item select,
+.setting-item input[type="number"],
+.setting-item input[type="text"],
+.setting-item input[type="color"] {
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.setting-item select:hover,
+.setting-item input[type="number"]:hover,
+.setting-item input[type="text"]:hover,
+.setting-item input[type="color"]:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.setting-item select:focus,
+.setting-item input[type="number"]:focus,
+.setting-item input[type="text"]:focus,
+.setting-item input[type="color"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.2);
+}
+
+/* تحسين مظهر المفاتيح التبديلية */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    border-radius: 34px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.switch:hover {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e0e0e0;
+    transition: .4s;
+    border-radius: 34px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input:checked + .slider {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-color-dark));
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* تحسينات أزرار المنتدى */
+.forum-actions .btn {
+    margin: 0 5px;
+}
+
+/* تحسينات أزرار المقالات */
+.article-actions .btn {
+    margin: 0 5px;
+}
+
+/* تحسينات أزرار الفتاوى */
+.fatwa-actions .btn {
+    margin: 0 5px;
+}
+
+/* تحسينات أزرار الدروس */
+.lesson-actions .btn {
+    margin: 0 5px;
+}
+
+/* تحسينات أزرار المسبحة */
+.tasbih-controls .btn {
+    margin: 0 5px;
+    min-width: 60px;
+}
+
+/* تحسينات أزرار القبلة */
+.qibla-controls .btn {
+    margin: 0 5px;
+}
+
+/* تحسينات أزرار القرآن */
+.quran-controls .btn {
+    margin: 0 5px;
+}
+
+/* تحسينات أزرار الأذكار */
+.azkar-controls .btn {
+    margin: 0 5px;
+}
+
+/* تحسينات أزرار الأحاديث */
+.hadith-controls .btn {
+    margin: 0 5px;
+}
+
+/* تحسينات أزرار مواقيت الصلاة */
+.prayer-controls .btn {
+    margin: 0 5px;
+}

@@ -1,0 +1,252 @@
+/* ===== تنسيقات الوضع المظلم - الموقع الإسلامي المتكامل ===== */
+
+/* متغيرات الألوان للوضع المظلم */
+:root {
+    --dark-bg-main: #121212;
+    --dark-bg-card: #1e1e1e;
+    --dark-bg-section: #1a1a1a;
+    --dark-bg-header: #1c1c1c;
+    --dark-bg-footer: #0f1a21;
+    --dark-bg-sidebar: #1e1e1e;
+    --dark-bg-input: #2a2a2a;
+    --dark-bg-hover: #252525;
+    --dark-border-color: #333333;
+    --dark-text-color: #e0e0e0;
+    --dark-text-muted: #a0a0a0;
+    --dark-link-color: #64b5f6;
+    --dark-primary-color: #3a8ca8;
+    --dark-secondary-color: #9bc742;
+    --dark-accent-color: #f39c12;
+}
+
+/* تفعيل الوضع المظلم عند تفعيله من قبل المستخدم */
+body.dark-theme {
+    background-color: var(--dark-bg-main);
+    color: var(--dark-text-color);
+}
+
+/* تنسيقات القسم العلوي */
+body.dark-theme header {
+    background-color: var(--dark-bg-header);
+    border-bottom: 1px solid var(--dark-border-color);
+}
+
+body.dark-theme .logo h1 {
+    color: var(--dark-text-color);
+}
+
+body.dark-theme nav ul li a {
+    color: var(--dark-text-color);
+}
+
+body.dark-theme nav ul li a:hover,
+body.dark-theme nav ul li a.active {
+    color: var(--dark-primary-color);
+}
+
+/* تنسيقات البطاقات والأقسام */
+body.dark-theme .section {
+    background-color: var(--dark-bg-section);
+}
+
+body.dark-theme .feature-card,
+body.dark-theme .article-card,
+body.dark-theme .prayer-card,
+body.dark-theme .hadith-card,
+body.dark-theme .zikr-card,
+body.dark-theme .quran-sidebar,
+body.dark-theme .quran-content,
+body.dark-theme .fatwa-card,
+body.dark-theme .settings-card,
+body.dark-theme .qibla-card,
+body.dark-theme .tasbih-counter,
+body.dark-theme .tasbih-card,
+body.dark-theme .search-box,
+body.dark-theme .filter-container,
+body.dark-theme .content-box,
+body.dark-theme .form-container,
+body.dark-theme .result-container {
+    background-color: var(--dark-bg-card);
+    border: 1px solid var(--dark-border-color);
+    color: var(--dark-text-color);
+}
+
+body.dark-theme .section-title {
+    color: var(--dark-text-color);
+}
+
+/* تنسيقات النصوص والروابط */
+body.dark-theme h1, 
+body.dark-theme h2, 
+body.dark-theme h3, 
+body.dark-theme h4, 
+body.dark-theme h5, 
+body.dark-theme h6 {
+    color: var(--dark-text-color);
+}
+
+body.dark-theme p {
+    color: var(--dark-text-muted);
+}
+
+body.dark-theme a {
+    color: var(--dark-link-color);
+}
+
+body.dark-theme a:hover {
+    color: var(--dark-primary-color);
+}
+
+/* تنسيقات الأزرار */
+body.dark-theme .btn-primary {
+    background-color: var(--dark-primary-color);
+}
+
+body.dark-theme .btn-secondary {
+    background-color: var(--dark-secondary-color);
+}
+
+body.dark-theme .btn-accent {
+    background-color: var(--dark-accent-color);
+}
+
+/* تنسيقات القسم السفلي */
+body.dark-theme footer {
+    background-color: var(--dark-bg-footer);
+    color: var(--dark-text-color);
+}
+
+/* تنسيقات مدخلات النموذج */
+body.dark-theme input,
+body.dark-theme select,
+body.dark-theme textarea {
+    background-color: var(--dark-bg-input);
+    border: 1px solid var(--dark-border-color);
+    color: var(--dark-text-color);
+}
+
+body.dark-theme input:focus,
+body.dark-theme select:focus,
+body.dark-theme textarea:focus {
+    border-color: var(--dark-primary-color);
+}
+
+/* تنسيقات خاصة بصفحة القرآن الكريم */
+body.dark-theme .surah-list,
+body.dark-theme .ayah-container {
+    background-color: var(--dark-bg-card);
+    border: 1px solid var(--dark-border-color);
+}
+
+body.dark-theme .surah-item:hover {
+    background-color: var(--dark-bg-hover);
+}
+
+body.dark-theme .ayah-text {
+    color: var(--dark-text-color);
+}
+
+/* تنسيقات خاصة بصفحة المقالات */
+body.dark-theme .article-content {
+    background-color: var(--dark-bg-card);
+}
+
+body.dark-theme .article-title {
+    color: var(--dark-text-color);
+}
+
+body.dark-theme .article-meta {
+    color: var(--dark-text-muted);
+}
+
+/* تنسيقات خاصة بصفحة الأذكار */
+body.dark-theme .zikr-text {
+    color: var(--dark-text-color);
+}
+
+body.dark-theme .zikr-count {
+    color: var(--dark-accent-color);
+}
+
+/* زر تبديل الوضع المظلم */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* تنسيقات إضافية للتوافق مع الوضع المظلم */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--dark-bg-main);
+        color: var(--dark-text-color);
+    }
+    
+    /* تطبيق جميع تنسيقات الوضع المظلم على العناصر */
+    header {
+        background-color: var(--dark-bg-header);
+        border-bottom: 1px solid var(--dark-border-color);
+    }
+    
+    .section {
+        background-color: var(--dark-bg-section);
+    }
+    
+    .feature-card,
+    .article-card,
+    .prayer-card,
+    .hadith-card,
+    .zikr-card,
+    .quran-sidebar,
+    .quran-content,
+    .fatwa-card,
+    .settings-card,
+    .qibla-card,
+    .tasbih-counter,
+    .tasbih-card,
+    .search-box,
+    .filter-container,
+    .content-box,
+    .form-container,
+    .result-container {
+        background-color: var(--dark-bg-card);
+        border: 1px solid var(--dark-border-color);
+        color: var(--dark-text-color);
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--dark-text-color);
+    }
+    
+    p {
+        color: var(--dark-text-muted);
+    }
+    
+    a {
+        color: var(--dark-link-color);
+    }
+    
+    a:hover {
+        color: var(--dark-primary-color);
+    }
+    
+    footer {
+        background-color: var(--dark-bg-footer);
+    }
+}

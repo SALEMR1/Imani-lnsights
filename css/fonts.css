@@ -1,0 +1,82 @@
+/* ===== تعريف الخطوط المحلية ===== */
+
+/* تعريف خط Noto Naskh Arabic */
+@font-face {
+    font-family: 'Noto Naskh Arabic';
+    src: url('../fonts/NotoNaskhArabic-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Naskh Arabic';
+    src: url('../fonts/NotoNaskhArabic-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* تعريف خط Tajawal */
+@font-face {
+    font-family: 'Tajawal';
+    src: url('../fonts/Tajawal-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tajawal';
+    src: url('../fonts/Tajawal-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tajawal';
+    src: url('../fonts/Tajawal-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tajawal';
+    src: url('../fonts/Tajawal-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* استخدام خطوط النظام العربية المتوفرة مع الخطوط المحلية */
+body {
+    font-family: 'Noto Naskh Arabic', 'Segoe UI', 'Dubai', 'Arial', sans-serif;
+    /* ترتيب الخطوط البديلة للتوافق مع جميع الأنظمة */
+}
+
+/* تحسين مظهر النصوص العربية */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+p, li, a, button, input, select, textarea {
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* تحسين مظهر العناوين العربية */
+.section-title, .article-title, .feature-title {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.3;
+}
+
+/* تحسين مظهر النصوص القرآنية */
+.quran-text, .ayah-text {
+    font-family: 'Traditional Arabic', 'Scheherazade', serif;
+    line-height: 1.8;
+    font-size: 1.2em;
+}

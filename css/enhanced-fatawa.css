@@ -1,0 +1,387 @@
+/* تنسيقات محسنة لصفحة الفتاوى الإسلامية */
+
+/* خلفية قسم الفتاوى */
+.fatawa-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, 
+        rgba(0, 87, 61, 0.08) 0%, 
+        rgba(13, 58, 101, 0.08) 50%, 
+        rgba(0, 87, 61, 0.08) 100%);
+    position: relative;
+}
+
+/* رأس قسم الفتاوى */
+.fatawa-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 25px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 87, 61, 0.1);
+    border: 1px solid rgba(0, 87, 61, 0.1);
+}
+
+/* تحسين مربع البحث */
+.search-container {
+    display: flex;
+    max-width: 400px;
+    width: 100%;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 14px 18px;
+    border: 1px solid rgba(0, 87, 61, 0.2);
+    border-radius: 10px 0 0 10px;
+    font-size: 1rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.search-container input:focus {
+    outline: none;
+    border-color: rgba(0, 87, 61, 0.5);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 0 0 3px rgba(0, 87, 61, 0.1);
+}
+
+.search-container button {
+    background: linear-gradient(135deg, #00573d, #0d3a65);
+    color: white;
+    border: none;
+    padding: 0 25px;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+    transition: all 0.3s ease;
+}
+
+.search-container button:hover {
+    background: linear-gradient(135deg, #00573d, #0d3a65);
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* تحسين قوائم التصفية */
+.filter-options {
+    display: flex;
+    gap: 15px;
+}
+
+.filter-options select {
+    padding: 14px 18px;
+    border: 1px solid rgba(0, 87, 61, 0.2);
+    border-radius: 10px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    min-width: 160px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2300573d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left 15px center;
+    padding-left: 40px;
+}
+
+.filter-options select:hover {
+    border-color: rgba(0, 87, 61, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.filter-options select:focus {
+    outline: none;
+    border-color: rgba(0, 87, 61, 0.5);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05), 0 0 0 3px rgba(0, 87, 61, 0.1);
+}
+
+/* قائمة الفتاوى */
+.fatawa-list {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-bottom: 50px;
+}
+
+/* بطاقة الفتوى */
+.fatwa-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 87, 61, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 87, 61, 0.1);
+    position: relative;
+}
+
+.fatwa-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 87, 61, 0.15);
+}
+
+/* رأس بطاقة الفتوى */
+.fatwa-card .fatwa-header {
+    padding: 25px 30px;
+    border-bottom: 1px solid rgba(0, 87, 61, 0.1);
+    background: linear-gradient(135deg, 
+        rgba(0, 87, 61, 0.03) 0%, 
+        rgba(13, 58, 101, 0.05) 100%);
+    margin-bottom: 0;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+}
+
+.fatwa-title {
+    margin: 0 0 20px 0;
+    font-size: 1.4rem;
+    color: #00573d;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.fatwa-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.fatwa-category, .fatwa-scholar {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.fatwa-category {
+    background: linear-gradient(135deg, #00573d, #0d3a65);
+    color: white;
+    box-shadow: 0 3px 8px rgba(0, 87, 61, 0.2);
+}
+
+.fatwa-scholar {
+    background: rgba(0, 87, 61, 0.1);
+    color: #00573d;
+    border: 1px solid rgba(0, 87, 61, 0.1);
+}
+
+/* محتوى الفتوى */
+.fatwa-content {
+    padding: 30px;
+}
+
+.fatwa-question, .fatwa-answer {
+    margin-bottom: 30px;
+}
+
+.fatwa-question h4, .fatwa-answer h4 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    color: #00573d;
+    font-size: 1.2rem;
+}
+
+.fatwa-question p, .fatwa-answer p {
+    line-height: 1.9;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.05rem;
+    font-family: 'Noto Naskh Arabic', 'Amiri', serif;
+    padding: 0 5px 0 15px;
+}
+
+.fatwa-answer p {
+    text-align: justify;
+}
+
+.fatwa-reference {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+    padding-top: 20px;
+    border-top: 1px dashed rgba(0, 87, 61, 0.2);
+    margin-top: 10px;
+}
+
+/* تذييل بطاقة الفتوى */
+.fatwa-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: rgba(0, 87, 61, 0.03);
+    border-top: 1px solid rgba(0, 87, 61, 0.1);
+}
+
+.fatwa-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.fatwa-actions .btn {
+    padding: 10px 18px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.share-btn {
+    background-color: transparent;
+    color: #0d3a65;
+    border: 1px solid #0d3a65;
+}
+
+.share-btn:hover {
+    background-color: #0d3a65;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.save-btn {
+    background-color: transparent;
+    color: #00573d;
+    border: 1px solid #00573d;
+}
+
+.save-btn:hover {
+    background-color: #00573d;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.fatwa-date {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* زر تحميل المزيد */
+.load-more {
+    text-align: center;
+    margin: 20px 0 50px;
+}
+
+.load-more .btn {
+    padding: 14px 35px;
+    background: linear-gradient(135deg, #00573d, #0d3a65);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 87, 61, 0.2);
+}
+
+.load-more .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 87, 61, 0.25);
+}
+
+.load-more .btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 10px rgba(0, 87, 61, 0.15);
+}
+
+/* تنسيقات للأجهزة المحمولة */
+@media (max-width: 768px) {
+    .fatawa-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-container {
+        max-width: 100%;
+    }
+    
+    .filter-options {
+        flex-direction: column;
+    }
+    
+    .fatwa-card .fatwa-header {
+        padding: 20px;
+    }
+    
+    .fatwa-content {
+        padding: 20px;
+    }
+    
+    .fatwa-question p, .fatwa-answer p {
+        padding: 0 0 0 10px;
+    }
+    
+    .fatwa-footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .fatwa-actions {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* تأثيرات إضافية للمشاركة */
+.share-options {
+    position: absolute;
+    bottom: 80px;
+    left: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: none;
+    z-index: 10;
+    border: 1px solid rgba(0, 87, 61, 0.1);
+}
+
+.share-options.active {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.share-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.share-option:hover {
+    background-color: rgba(0, 87, 61, 0.05);
+}
+
+.share-option i {
+    font-size: 1.2rem;
+    width: 25px;
+    text-align: center;
+}
+
+.share-option.facebook i {
+    color: #1877f2;
+}
+
+.share-option.twitter i {
+    color: #1da1f2;
+}
+
+.share-option.whatsapp i {
+    color: #25d366;
+}
+
+.share-option.copy i {
+    color: #6c757d;
+}

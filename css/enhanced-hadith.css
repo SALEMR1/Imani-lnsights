@@ -1,0 +1,222 @@
+/* تنسيقات محسنة لقسم الأحاديث النبوية */
+
+/* تنسيق عام لقسم الأحاديث */
+.hadith-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, 
+        rgba(0, 87, 61, 0.08) 0%, 
+        rgba(13, 58, 101, 0.08) 50%, 
+        rgba(0, 87, 61, 0.08) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* إضافة تأثير الموجات في خلفية القسم */
+.hadith-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, 
+        rgba(0, 87, 61, 0.05) 0%, 
+        rgba(13, 58, 101, 0.05) 50%, 
+        rgba(0, 87, 61, 0.05) 100%);
+    z-index: 0;
+}
+
+/* حاوية الأحاديث */
+.hadith-container {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* بطاقة الحديث */
+.hadith-card {
+    position: relative;
+    padding: 40px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 87, 61, 0.1);
+    transition: transform 0.4s ease;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid rgba(0, 87, 61, 0.1);
+    margin-bottom: 30px;
+}
+
+/* الإطار المضيء للبطاقة */
+.hadith-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(0, 87, 61, 0.03) 0%,
+        rgba(13, 58, 101, 0.05) 100%);
+    z-index: -1;
+}
+
+/* الحدود الثابتة للبطاقة */
+.hadith-card::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, 
+        #00573d 0%, 
+        #0d3a65 100%);
+    z-index: -2;
+    border-radius: 16px;
+    opacity: 0.2;
+}
+
+/* زخرفة إسلامية في الخلفية */
+.hadith-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/islamic-pattern.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.03;
+    z-index: -1;
+}
+
+/* نص الحديث */
+.hadith-text {
+    position: relative;
+    font-size: 1.7rem;
+    line-height: 2.2;
+    margin-bottom: 25px;
+    color: #000;
+    font-family: 'Scheherazade New', 'Amiri', 'Noto Naskh Arabic', serif;
+    font-weight: 600;
+    text-align: justify;
+    text-align-last: center;
+    letter-spacing: 0.4px;
+    word-spacing: 2px;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.hadith-text p {
+    position: relative;
+    padding: 0 30px;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    font-feature-settings: "kern", "liga", "calt";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* علامات التنصيص للحديث */
+.hadith-text p::before,
+.hadith-text p::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+}
+
+.hadith-text p::before {
+    top: 0;
+    right: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300573d'%3E%3Cpath d='M6.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35.208-.086.39-.16.539-.222.302-.125.474-.197.474-.197L9.758 4.03c0 0-.218.052-.597.144C8.97 4.222 8.737 4.278 8.472 4.345c-.271.05-.56.187-.882.312C7.272 4.799 6.904 4.895 6.562 5.123c-.344.218-.741.4-1.091.692C5.132 6.116 4.723 6.377 4.421 6.76c-.33.358-.656.734-.909 1.162C3.219 8.33 3.02 8.778 2.81 9.221c-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539.017.109.025.168.025.168l.026-.006C2.535 17.474 4.338 19 6.5 19c2.485 0 4.5-2.015 4.5-4.5S8.985 10 6.5 10zM17.5 10c-.223 0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35.208-.086.39-.16.539-.222.302-.125.474-.197.474-.197L20.758 4.03c0 0-.218.052-.597.144-.191.048-.424.104-.689.171-.271.05-.56.187-.882.312-.317.143-.686.238-1.028.467-.344.218-.741.4-1.091.692-.339.301-.748.562-1.05.944-.33.358-.656.734-.909 1.162C14.219 8.33 14.02 8.778 13.81 9.221c-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028 1.747.015.204.043.402.063.539.017.109.025.168.025.168l.026-.006C13.535 17.474 15.338 19 17.5 19c2.485 0 4.5-2.015 4.5-4.5S19.985 10 17.5 10z'/%3E%3C/svg%3E");
+}
+
+.hadith-text p::after {
+    bottom: 0;
+    left: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300573d'%3E%3Cpath d='M17.5 14c.223 0 .437-.034.65-.065-.069.232-.14.468-.254.68-.114.308-.292.575-.469.844-.148.291-.409.488-.601.737-.201.242-.475.403-.692.604-.213.21-.492.315-.714.463-.232.133-.434.28-.65.35-.208.086-.39.16-.539.222-.302.125-.474.197-.474.197l-.484-.988s.218-.052.597-.144c.191-.048.424-.104.689-.171.271-.05.56-.187.882-.312.317-.143.686-.238 1.028-.467.344-.218.741-.4 1.091-.692.339-.301.748-.562 1.05-.944.33-.358.656-.734.909-1.162.242-.408.441-.855.65-1.299.19-.443.343-.896.468-1.336.237-.882.343-1.72.384-2.437.034-.718.014-1.315-.028-1.747-.015-.204-.043-.402-.063-.539-.017-.109-.025-.168-.025-.168l-.026.006C20.465 6.526 18.662 5 16.5 5c-2.485 0-4.5 2.015-4.5 4.5S14.015 14 16.5 14zM6.5 14c.223 0 .437-.034.65-.065-.069.232-.14.468-.254.68-.114.308-.292.575-.469.844-.148.291-.409.488-.601.737-.201.242-.475.403-.692.604-.213.21-.492.315-.714.463-.232.133-.434.28-.65.35-.208.086-.39.16-.539.222-.302.125-.474.197-.474.197l-.484-.988s.218-.052.597-.144c.191-.048.424-.104.689-.171.271-.05.56-.187.882-.312.317-.143.686-.238 1.028-.467.344-.218.741-.4 1.091-.692.339-.301.748-.562 1.05-.944.33-.358.656-.734.909-1.162.242-.408.441-.855.65-1.299.19-.443.343-.896.468-1.336.237-.882.343-1.72.384-2.437.034-.718.014-1.315-.028-1.747-.015-.204-.043-.402-.063-.539-.017-.109-.025-.168-.025-.168l-.026.006C9.465 6.526 7.662 5 5.5 5 3.015 5 1 7.015 1 9.5S3.015 14 5.5 14z'/%3E%3C/svg%3E");
+    transform: rotate(180deg);
+}
+
+/* مصدر الحديث */
+.hadith-source {
+    position: relative;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid rgba(0, 87, 61, 0.1);
+}
+
+.hadith-source p {
+    color: #00573d;
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-family: 'Scheherazade New', 'Amiri', 'Noto Naskh Arabic', serif;
+}
+
+/* أزرار التحكم */
+.hadith-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.hadith-controls button {
+    background: linear-gradient(135deg, #00573d, #0d3a65);
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 87, 61, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hadith-controls button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 87, 61, 0.3);
+}
+
+#random-hadith {
+    background: linear-gradient(135deg, #0d3a65, #00573d);
+}
+
+/* تنسيقات للأجهزة المحمولة */
+@media (max-width: 768px) {
+    .hadith-card {
+        padding: 25px 20px;
+    }
+    
+    .hadith-text {
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+    
+    .hadith-text p {
+        padding: 0 20px;
+    }
+    
+    .hadith-controls {
+        flex-wrap: wrap;
+    }
+    
+    .hadith-controls button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* تم حذف تعريف الخط المكرر */

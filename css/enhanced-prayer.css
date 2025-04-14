@@ -1,0 +1,200 @@
+/* تنسيقات محسنة لقسم مواقيت الصلاة */
+
+/* تنسيق عام لقسم مواقيت الصلاة */
+.prayer-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, 
+        rgba(0, 87, 61, 0.08) 0%, 
+        rgba(13, 58, 101, 0.08) 50%, 
+        rgba(0, 87, 61, 0.08) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* إضافة تأثير الموجات في خلفية القسم */
+.prayer-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, 
+        rgba(0, 87, 61, 0.05) 0%, 
+        rgba(13, 58, 101, 0.05) 50%, 
+        rgba(0, 87, 61, 0.05) 100%);
+    z-index: 0;
+}
+
+/* حاوية مواقيت الصلاة */
+.prayer-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/* معلومات الموقع والتاريخ */
+.location-info {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 87, 61, 0.1);
+    border: 1px solid rgba(0, 87, 61, 0.1);
+    width: 30%;
+    flex-shrink: 0;
+}
+
+.location-info h3 {
+    color: #00573d;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.location-info p {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* معلومات الصلاة القادمة */
+.next-prayer-info {
+    background: linear-gradient(135deg, #00573d, #0d3a65);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.next-prayer-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* شبكة مواقيت الصلاة */
+.prayer-times {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1.5rem;
+    flex-grow: 1;
+}
+
+/* بطاقات مواقيت الصلاة */
+.prayer-card {
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 87, 61, 0.1);
+    transition: transform 0.4s ease;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid rgba(0, 87, 61, 0.1);
+}
+
+/* الإطار المضيء للبطاقة */
+.prayer-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(0, 87, 61, 0.03) 0%,
+        rgba(13, 58, 101, 0.05) 100%);
+    z-index: -1;
+}
+
+/* الحدود الثابتة للبطاقة */
+.prayer-card::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, 
+        #00573d 0%, 
+        #0d3a65 100%);
+    z-index: -2;
+    border-radius: 16px;
+    opacity: 0.2;
+}
+
+.prayer-card:hover {
+    transform: translateY(-10px);
+}
+
+/* أيقونة الصلاة */
+.prayer-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #00573d, #0d3a65);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    transition: transform 0.4s ease;
+}
+
+.prayer-card:hover .prayer-icon {
+    transform: scale(1.1);
+}
+
+.prayer-icon i {
+    font-size: 1.5rem;
+}
+
+/* اسم الصلاة */
+.prayer-card h3 {
+    color: #00573d;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+/* وقت الصلاة */
+.prayer-card p {
+    color: #0d3a65;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* تنسيقات للأجهزة المحمولة */
+@media (max-width: 992px) {
+    .prayer-container {
+        flex-direction: column;
+    }
+    
+    .location-info {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    
+    .prayer-times {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .prayer-times {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .prayer-card {
+        padding: 1.5rem;
+    }
+    
+    .prayer-icon {
+        width: 50px;
+        height: 50px;
+    }
+}

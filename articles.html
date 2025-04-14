@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المقالات الإسلامية | بصائر - موقع إسلامي شامل</title>
+    <meta name="description" content="تصفح مجموعة متنوعة من المقالات الإسلامية في موقع بصائر، مقالات في العقيدة والفقه والسيرة النبوية وتفسير القرآن وغيرها من المواضيع الإسلامية">
+    <meta name="keywords" content="مقالات إسلامية، بصائر، فقه إسلامي، عقيدة، سيرة نبوية، تفسير القرآن، أخلاق إسلامية">
+    <meta name="author" content="سالم رزق">
+    <meta property="og:title" content="المقالات الإسلامية | بصائر">
+    <meta property="og:description" content="تصفح مجموعة متنوعة من المقالات الإسلامية في موقع بصائر، مقالات في العقيدة والفقه والسيرة النبوية وتفسير القرآن وغيرها من المواضيع الإسلامية">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://basaer-islamic.com/articles.html">
+    <meta property="og:image" content="https://basaer-islamic.com/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="المقالات الإسلامية | بصائر">
+    <meta name="twitter:description" content="تصفح مجموعة متنوعة من المقالات الإسلامية في موقع بصائر، مقالات في العقيدة والفقه والسيرة النبوية وتفسير القرآن وغيرها من المواضيع الإسلامية">
+    <link rel="canonical" href="https://basaer-islamic.com/articles.html">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/articles.css">
+    <link rel="stylesheet" href="css/enhanced-header.css">
+    <link rel="stylesheet" href="css/enhanced-buttons.css">
+    <link rel="stylesheet" href="css/enhanced-backgrounds.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <link rel="stylesheet" href="css/mobile-enhancements.css">
+</head>
+<body class="articles-page">
+    <!-- القسم العلوي -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-mosque"></i>
+                <h1>بصائر</h1>
+            </div>
+            <button class="menu-toggle" aria-label="تبديل القائمة" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                    <li><a href="index.html#quran"><i class="fas fa-book-quran"></i> القرآن الكريم</a></li>
+                    <li><a href="index.html#prayer"><i class="fas fa-clock"></i> مواقيت الصلاة</a></li>
+                    <li><a href="index.html#hadith"><i class="fas fa-scroll"></i> الأحاديث</a></li>
+                    <li><a href="index.html#azkar"><i class="fas fa-pray"></i> الأذكار</a></li>
+                    <li><a href="qibla.html"><i class="fas fa-compass"></i> القبلة</a></li>
+                    <li><a href="articles.html" class="active"><i class="fas fa-newspaper"></i> المقالات</a></li>
+                    <li><a href="fatawa.html"><i class="fas fa-gavel"></i> الفتاوى</a></li>
+                    <li><a href="tasbih.html"><i class="fas fa-hands-praying"></i> المسبحة</a></li>
+                    <li><a href="quiz.html"><i class="fas fa-graduation-cap"></i> اختبر معلوماتك</a></li>
+                    <li><a href="settings.html"><i class="fas fa-cog"></i> الإعدادات</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- قسم المقالات الإسلامية -->
+    <section class="articles-section">
+        <div class="container">
+            <h2 class="section-title">المقالات الإسلامية</h2>
+            
+            <div class="articles-filter">
+                <div class="search-box">
+                    <input type="text" id="article-search" placeholder="ابحث في المقالات...">
+                    <button id="search-article-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="categories">
+                    <button class="category-btn active" data-category="all">الكل</button>
+                    <button class="category-btn" data-category="fiqh">الفقه</button>
+                    <button class="category-btn" data-category="aqeedah">العقيدة</button>
+                    <button class="category-btn" data-category="seerah">السيرة النبوية</button>
+                    <button class="category-btn" data-category="tafseer">التفسير</button>
+                    <button class="category-btn" data-category="hadith">علوم الحديث</button>
+                    <button class="category-btn" data-category="akhlaq">الأخلاق</button>
+                    <button class="category-btn" data-category="tarbiya">التربية</button>
+                    <button class="category-btn" data-category="quran">الإعجاز العلمي</button>
+                </div>
+            </div>
+            
+            <div class="articles-grid" id="articles-container">
+                <!-- المقالات ستضاف هنا بواسطة JavaScript -->
+                
+                <!-- مقال نموذجي 1 -->
+                <div class="article-card" data-category="fiqh">
+                    <div class="article-icon article-icon-ramadan">
+                        <span class="icon-text">رمضان</span>
+                        <div class="article-category">الفقه</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">أحكام الصيام في شهر رمضان</h3>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar-alt"></i> 1 رمضان 1446</span>
+                            <span><i class="far fa-eye"></i> 1250 مشاهدة</span>
+                        </div>
+                        <p class="article-excerpt">
+                            يعتبر الصيام من أهم العبادات في الإسلام، وهو الركن الرابع من أركان الإسلام. في هذا المقال نتناول أحكام الصيام وفضائله...
+                        </p>
+                        <a href="article-details.html?id=1" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                
+                <!-- مقال نموذجي 2 -->
+                <div class="article-card" data-category="aqeedah">
+                    <div class="article-icon article-icon-aqeedah">
+                        <span class="icon-text">الإيمان</span>
+                        <div class="article-category">العقيدة</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">أركان الإيمان الستة وأهميتها في حياة المسلم</h3>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar-alt"></i> 15 شعبان 1446</span>
+                            <span><i class="far fa-eye"></i> 980 مشاهدة</span>
+                        </div>
+                        <p class="article-excerpt">
+                            الإيمان في الإسلام يقوم على ستة أركان أساسية، وهي: الإيمان بالله، وملائكته، وكتبه، ورسله، واليوم الآخر، والقدر خيره وشره...
+                        </p>
+                        <a href="article-details.html?id=2" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                
+                <!-- مقال نموذجي 3 -->
+                <div class="article-card" data-category="seerah">
+                    <div class="article-icon article-icon-seerah">
+                        <span class="icon-text">الهجرة</span>
+                        <div class="article-category">السيرة النبوية</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">دروس من هجرة النبي صلى الله عليه وسلم</h3>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar-alt"></i> 1 محرم 1446</span>
+                            <span><i class="far fa-eye"></i> 1540 مشاهدة</span>
+                        </div>
+                        <p class="article-excerpt">
+                            تعد هجرة النبي محمد صلى الله عليه وسلم من مكة إلى المدينة حدثاً فاصلاً في تاريخ الإسلام، وفيها دروس وعبر عظيمة...
+                        </p>
+                        <a href="article-details.html?id=3" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                
+                <!-- مقال نموذجي 4 -->
+                <div class="article-card" data-category="tafseer">
+                    <div class="article-icon article-icon-tafseer">
+                        <span class="icon-text">الإخلاص</span>
+                        <div class="article-category">التفسير</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">تفسير سورة الإخلاص وفضائلها</h3>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar-alt"></i> 10 رجب 1446</span>
+                            <span><i class="far fa-eye"></i> 1120 مشاهدة</span>
+                        </div>
+                        <p class="article-excerpt">
+                            سورة الإخلاص من السور العظيمة في القرآن الكريم، وقد ورد أنها تعدل ثلث القرآن. في هذا المقال نتناول تفسيرها وفضائلها...
+                        </p>
+                        <a href="article-details.html?id=4" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                
+                <!-- مقال نموذجي 5 -->
+                <div class="article-card" data-category="hadith">
+                    <div class="article-icon article-icon-hadith">
+                        <span class="icon-text">الحديث</span>
+                        <div class="article-category">علوم الحديث</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">مصطلحات علم الحديث وأهميتها</h3>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar-alt"></i> 20 جمادى الأولى 1446</span>
+                            <span><i class="far fa-eye"></i> 850 مشاهدة</span>
+                        </div>
+                        <p class="article-excerpt">
+                            علم الحديث من أهم العلوم الإسلامية التي اهتم بها العلماء، وله مصطلحات خاصة تساعد في تمييز الأحاديث الصحيحة من غيرها...
+                        </p>
+                        <a href="article-details.html?id=5" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                
+                <!-- مقال نموذجي 6 -->
+                <div class="article-card" data-category="fiqh">
+                    <div class="article-icon article-icon-fiqh">
+                        <span class="icon-text">الزكاة</span>
+                        <div class="article-category">الفقه</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">أحكام الزكاة وشروطها</h3>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar-alt"></i> 5 شوال 1446</span>
+                            <span><i class="far fa-eye"></i> 920 مشاهدة</span>
+                        </div>
+                        <p class="article-excerpt">
+                            الزكاة هي الركن الثالث من أركان الإسلام، وهي حق معلوم في المال. في هذا المقال نتناول أحكام الزكاة وشروطها وأنواع الأموال التي تجب فيها...
+                        </p>
+                        <a href="article-details.html?id=6" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                
+                <!-- مقال نموذجي 7 -->
+                <div class="article-card" data-category="fiqh">
+                    <div class="article-icon article-icon-ashr">
+                        <span class="icon-text">العشر</span>
+                        <div class="article-category">الفقه</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">فضل العشر الأواخر من رمضان</h3>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar-alt"></i> 20 رمضان 1446</span>
+                            <span><i class="far fa-eye"></i> 780 مشاهدة</span>
+                        </div>
+                        <p class="article-excerpt">
+                            العشر الأواخر من رمضان هي أفضل ليالي العام، وفيها ليلة القدر التي هي خير من ألف شهر. في هذا المقال نتناول فضائل هذه الأيام المباركة...
+                        </p>
+                        <a href="article-details.html?id=7" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                
+                <!-- مقال نموذجي 8 -->
+                <div class="article-card" data-category="fiqh">
+                    <div class="article-icon article-icon-salah">
+                        <span class="icon-text">الصلاة</span>
+                        <div class="article-category">الفقه</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">أحكام صلاة التراويح</h3>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar-alt"></i> 10 رمضان 1446</span>
+                            <span><i class="far fa-eye"></i> 850 مشاهدة</span>
+                        </div>
+                        <p class="article-excerpt">
+                            صلاة التراويح من السنن المؤكدة في شهر رمضان، وهي من شعائر هذا الشهر الكريم. في هذا المقال نتناول أحكامها وفضلها وكيفية أدائها...
+                        </p>
+                        <a href="article-details.html?id=8" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                
+                <!-- مقال أخلاقيات المسلم في التعامل مع غير المسلمين -->
+                <div class="article-card" data-category="akhlaq">
+                    <div class="article-icon article-icon-akhlaq">
+                        <span class="icon-text">الأخلاق</span>
+                        <div class="article-category">الأخلاق</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">أخلاقيات المسلم في التعامل مع غير المسلمين</h3>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar-alt"></i> 1 جمادى الأولى 1447</span>
+                            <span><i class="far fa-eye"></i> 1200 مشاهدة</span>
+                        </div>
+                        <p class="article-excerpt">
+                            يتناول هذا المقال الأسس والمبادئ الأخلاقية التي ينبغي للمسلم أن يلتزم بها في تعامله مع غير المسلمين، مستنداً إلى القرآن الكريم والسنة النبوية...
+                        </p>
+                        <a href="article-details.html?id=9" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <!-- مقال التربية الإسلامية للأبناء في العصر الرقمي -->
+                <div class="article-card" data-category="tarbiya">
+                    <div class="article-icon article-icon-tarbiya">
+                        <span class="icon-text">التربية</span>
+                        <div class="article-category">التربية</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">التربية الإسلامية للأبناء في العصر الرقمي</h3>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar-alt"></i> 15 جمادى الأولى 1447</span>
+                            <span><i class="far fa-eye"></i> 1050 مشاهدة</span>
+                        </div>
+                        <p class="article-excerpt">
+                            يناقش هذا المقال تحديات التربية الإسلامية للأبناء في العصر الرقمي، ويقدم حلولاً عملية للآباء والأمهات للتعامل مع هذه التحديات...
+                        </p>
+                        <a href="article-details.html?id=10" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <!-- مقال الإعجاز العلمي في القرآن: رؤية معاصرة -->
+                <div class="article-card" data-category="quran">
+                    <div class="article-icon article-icon-quran">
+                        <span class="icon-text">الإعجاز</span>
+                        <div class="article-category">الإعجاز العلمي</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">الإعجاز العلمي في القرآن: رؤية معاصرة</h3>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar-alt"></i> 1 جمادى الآخرة 1447</span>
+                            <span><i class="far fa-eye"></i> 1300 مشاهدة</span>
+                        </div>
+                        <p class="article-excerpt">
+                            يستعرض هذا المقال جوانب من الإعجاز العلمي في القرآن الكريم، مع التركيز على الاكتشافات العلمية الحديثة التي تؤكد صدق القرآن...
+                        </p>
+                        <a href="article-details.html?id=11" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                
+                <!-- مقال الصبر وأثره في حياة المسلم -->
+                <div class="article-card" data-category="akhlaq">
+                    <div class="article-icon article-icon-akhlaq">
+                        <span class="icon-text">الصبر</span>
+                        <div class="article-category">الأخلاق</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">الصبر وأثره في حياة المسلم</h3>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar-alt"></i> 10 جمادى الآخرة 1447</span>
+                            <span><i class="far fa-eye"></i> 1100 مشاهدة</span>
+                        </div>
+                        <p class="article-excerpt">
+                            يتناول هذا المقال مفهوم الصبر في الإسلام وأنواعه وفضائله وأثره في حياة المسلم، مع ذكر نماذج من صبر الأنبياء والصالحين...
+                        </p>
+                        <a href="article-details.html?id=12" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+
+                <!-- مقال فقه المعاملات المالية المعاصرة -->
+                <div class="article-card" data-category="fiqh">
+                    <div class="article-icon article-icon-muamalat">
+                        <span class="icon-text">المعاملات</span>
+                        <div class="article-category">الفقه</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">فقه المعاملات المالية المعاصرة</h3>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar-alt"></i> 25 جمادى الآخرة 1447</span>
+                            <span><i class="far fa-eye"></i> 950 مشاهدة</span>
+                        </div>
+                        <p class="article-excerpt">
+                            يتناول هذا المقال أحكام المعاملات المالية المعاصرة في الفقه الإسلامي، مثل البطاقات الائتمانية والأسهم والصكوك والتأمين وغيرها...
+                        </p>
+                        <a href="article-details.html?id=13" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                
+                <!-- مقال تدبر القرآن الكريم -->
+                <div class="article-card" data-category="quran">
+                    <div class="article-icon article-icon-quran">
+                        <span class="icon-text">التدبر</span>
+                        <div class="article-category">القرآن الكريم</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">تدبر القرآن الكريم: مفهومه وأساليبه وثمراته</h3>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar-alt"></i> 15 رجب 1447</span>
+                            <span><i class="far fa-eye"></i> 1020 مشاهدة</span>
+                        </div>
+                        <p class="article-excerpt">
+                            يتناول هذا المقال مفهوم تدبر القرآن الكريم وأهميته وأساليبه وثمراته، مع ذكر نماذج من تدبر السلف للقرآن الكريم...
+                        </p>
+                        <a href="article-details.html?id=14" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                
+                <!-- مقال الذكر والدعاء -->
+                <div class="article-card" data-category="fiqh">
+                    <div class="article-icon article-icon-dhikr">
+                        <span class="icon-text">الذكر</span>
+                        <div class="article-category">العبادات</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">الذكر والدعاء وأثرهما في حياة المسلم</h3>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar-alt"></i> 20 رجب 1447</span>
+                            <span><i class="far fa-eye"></i> 1150 مشاهدة</span>
+                        </div>
+                        <p class="article-excerpt">
+                            يتناول هذا المقال مفهوم الذكر والدعاء وفضلهما وآدابهما وأنواعهما وأثرهما في حياة المسلم، مع ذكر نماذج من أذكار ودعوات النبي صلى الله عليه وسلم...
+                        </p>
+                        <a href="article-details.html?id=15" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                
+                <!-- مقال حقوق الإنسان في الإسلام -->
+                <div class="article-card" data-category="fiqh">
+                    <div class="article-icon article-icon-rights">
+                        <span class="icon-text">الحقوق</span>
+                        <div class="article-category">الفقه</div>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">حقوق الإنسان في الإسلام</h3>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar-alt"></i> 25 رجب 1447</span>
+                            <span><i class="far fa-eye"></i> 1250 مشاهدة</span>
+                        </div>
+                        <p class="article-excerpt">
+                            يتناول هذا المقال مفهوم حقوق الإنسان في الإسلام وخصائصها وأنواعها، مع التركيز على حقوق المرأة والطفل وغير المسلمين في الإسلام...
+                        </p>
+                        <a href="article-details.html?id=16" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pagination">
+                <button class="pagination-btn" id="prev-page" disabled><i class="fas fa-chevron-right"></i></button>
+                <div class="page-numbers" id="page-numbers">
+                    <button class="page-number active">1</button>
+                    <button class="page-number">2</button>
+                    <button class="page-number">3</button>
+                </div>
+                <button class="pagination-btn" id="next-page"><i class="fas fa-chevron-left"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- القسم السفلي -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>بصائر</h2>
+                    <p>موقع إسلامي شامل للقرآن الكريم والأحاديث النبوية والأذكار ومواقيت الصلاة</p>
+                </div>
+                <div class="footer-links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="index.html#quran">القرآن الكريم</a></li>
+                        <li><a href="index.html#prayer">مواقيت الصلاة</a></li>
+                        <li><a href="index.html#hadith">الأحاديث النبوية</a></li>
+                        <li><a href="index.html#azkar">الأذكار</a></li>
+                        <li><a href="qibla.html">اتجاه القبلة</a></li>
+                        <li><a href="articles.html">المقالات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>تواصل معنا</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> salmbrykrzq@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>تابعنا</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/share/1CtncPzj4R/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.youtube.com/@SALEM.R" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="https://wa.me/+201208569475" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 بصائر. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/articles.js"></script>
+    <script src="js/mobile-menu.js"></script>
+</body>
+</html>

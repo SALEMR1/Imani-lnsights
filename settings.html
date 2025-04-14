@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الإعدادات - بصائر</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="css/enhanced-header.css">
+    <link rel="stylesheet" href="css/enhanced-buttons.css">
+    <link rel="stylesheet" href="css/enhanced-backgrounds.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <link rel="stylesheet" href="css/mobile-enhancements.css">
+</head>
+<body class="settings-page">
+    <!-- القسم العلوي -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-mosque"></i>
+                <h1>بصائر</h1>
+            </div>
+            <button class="menu-toggle" aria-label="تبديل القائمة" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                    <li><a href="index.html#quran"><i class="fas fa-book-quran"></i> القرآن الكريم</a></li>
+                    <li><a href="index.html#prayer"><i class="fas fa-clock"></i> مواقيت الصلاة</a></li>
+                    <li><a href="index.html#hadith"><i class="fas fa-scroll"></i> الأحاديث</a></li>
+                    <li><a href="index.html#azkar"><i class="fas fa-pray"></i> الأذكار</a></li>
+                    <li><a href="qibla.html"><i class="fas fa-compass"></i> القبلة</a></li>
+                    <li><a href="articles.html"><i class="fas fa-newspaper"></i> المقالات</a></li>
+                    <li><a href="fatawa.html"><i class="fas fa-gavel"></i> الفتاوى</a></li>
+                    <li><a href="tasbih.html"><i class="fas fa-hands-praying"></i> المسبحة</a></li>
+                    <li><a href="quiz.html"><i class="fas fa-graduation-cap"></i> اختبر معلوماتك</a></li>
+                    <li><a href="settings.html" class="active"><i class="fas fa-cog"></i> الإعدادات</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- قسم الإعدادات -->
+    <section class="settings-section">
+        <div class="container">
+            <h2 class="section-title">الإعدادات</h2>
+            
+            <div class="settings-container">
+                <!-- قائمة الإعدادات -->
+                <div class="settings-sidebar">
+                    <ul class="settings-nav">
+                        <li class="active" data-tab="general">
+                            <i class="fas fa-sliders-h"></i>
+                            <span>إعدادات عامة</span>
+                        </li>
+                        <li data-tab="prayer">
+                            <i class="fas fa-mosque"></i>
+                            <span>إعدادات الصلاة</span>
+                        </li>
+                        <li data-tab="quran">
+                            <i class="fas fa-book-quran"></i>
+                            <span>إعدادات القرآن</span>
+                        </li>
+                        <li data-tab="notifications">
+                            <i class="fas fa-bell"></i>
+                            <span>الإشعارات</span>
+                        </li>
+                        <li data-tab="appearance">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>المظهر</span>
+                        </li>
+                        <li data-tab="language">
+                            <i class="fas fa-language"></i>
+                            <span>اللغة والمنطقة</span>
+                        </li>
+                        <li data-tab="data">
+                            <i class="fas fa-database"></i>
+                            <span>البيانات والخصوصية</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- محتوى الإعدادات -->
+                <div class="settings-content">
+                    <!-- الإعدادات العامة -->
+                    <div class="settings-tab" id="general">
+                        <h3>الإعدادات العامة</h3>
+                        <div class="settings-group">
+                            <div class="setting-item">
+                                <label>حفظ آخر موقع تم تصفحه</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="save-last-location">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <label>تفعيل الصوت</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="enable-sound">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <label>الوضع المظلم التلقائي (حسب وقت الجهاز)</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="auto-dark-mode">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <label>عرض نصائح الاستخدام</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="show-tips">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- إعدادات الصلاة -->
+                    <div class="settings-tab" id="prayer">
+                        <h3>إعدادات الصلاة</h3>
+                        <div class="settings-group">
+                            <div class="setting-item">
+                                <label>طريقة حساب أوقات الصلاة</label>
+                                <select id="prayer-calculation-method">
+                                    <option value="mwl">رابطة العالم الإسلامي</option>
+                                    <option value="egyptian">الهيئة المصرية العامة للمساحة</option>
+                                    <option value="karachi">جامعة العلوم الإسلامية كراتشي</option>
+                                    <option value="umm-alqura">جامعة أم القرى</option>
+                                </select>
+                            </div>
+                            <div class="setting-item">
+                                <label>تنبيهات الصلاة</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="prayer-notifications">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <label>وقت التنبيه قبل الأذان (بالدقائق)</label>
+                                <input type="number" id="prayer-notification-time" min="0" max="30" value="15">
+                            </div>
+                            <div class="setting-item">
+                                <label>اختيار صوت الأذان</label>
+                                <select id="adhan-sound">
+                                    <option value="makkah">أذان الحرم المكي</option>
+                                    <option value="madinah">أذان المسجد النبوي</option>
+                                    <option value="classic">الأذان التقليدي</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- إعدادات القرآن -->
+                    <div class="settings-tab" id="quran">
+                        <h3>إعدادات القرآن</h3>
+                        <div class="settings-group">
+                            <div class="setting-item">
+                                <label>القارئ الافتراضي</label>
+                                <select id="default-reciter">
+                                    <option value="mishari">مشاري راشد العفاسي</option>
+                                    <option value="sudais">عبد الرحمن السديس</option>
+                                    <option value="minshawi">محمد صديق المنشاوي</option>
+                                </select>
+                            </div>
+                            <div class="setting-item">
+                                <label>حجم خط القرآن</label>
+                                <input type="range" id="quran-font-size" min="16" max="32" value="24">
+                            </div>
+                            <div class="setting-item">
+                                <label>عرض الترجمة</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="show-translation">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <label>عرض التفسير</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="show-tafseer">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- إعدادات الإشعارات -->
+                    <div class="settings-tab" id="notifications">
+                        <h3>إعدادات الإشعارات</h3>
+                        <div class="settings-group">
+                            <div class="setting-item">
+                                <label>إشعارات مواقيت الصلاة</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="prayer-time-notifications">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <label>إشعارات الأذكار</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="azkar-notifications">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <label>إشعارات المقالات الجديدة</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="articles-notifications">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <label>إشعارات الفتاوى</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="fatawa-notifications">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- إعدادات المظهر -->
+                    <div class="settings-tab" id="appearance">
+                        <h3>إعدادات المظهر</h3>
+                        <div class="settings-group">
+                            <div class="setting-item">
+                                <label>السمة</label>
+                                <select id="theme-select">
+                                    <option value="light">فاتح</option>
+                                    <option value="dark">داكن</option>
+                                    <option value="auto">تلقائي (حسب وقت النظام)</option>
+                                </select>
+                            </div>
+                            <div class="setting-item">
+                                <label>اللون الأساسي</label>
+                                <div class="color-picker-container">
+                                    <input type="color" id="primary-color" value="#1f6e8c">
+                                    <button class="btn btn-sm" id="reset-color">استعادة اللون الافتراضي</button>
+                                </div>
+                            </div>
+                            <div class="setting-item">
+                                <label>معاينة اللون الأساسي</label>
+                                <div class="color-preview">
+                                    <div class="preview-item" id="color-preview-btn">زر</div>
+                                    <div class="preview-item" id="color-preview-header">عنوان</div>
+                                    <div class="preview-item" id="color-preview-accent">تمييز</div>
+                                </div>
+                            </div>
+                            <div class="setting-item">
+                                <label>حجم الخط</label>
+                                <select id="font-size">
+                                    <option value="small">صغير</option>
+                                    <option value="medium" selected>متوسط</option>
+                                    <option value="large">كبير</option>
+                                    <option value="xlarge">كبير جداً</option>
+                                </select>
+                            </div>
+                            <div class="setting-item">
+                                <label>نوع الخط</label>
+                                <select id="font-family">
+                                    <option value="cairo">القاهرة</option>
+                                    <option value="tajawal">تجوال</option>
+                                    <option value="amiri">أميري</option>
+                                    <option value="naskh">نسخ</option>
+                                </select>
+                            </div>
+                            <div class="setting-item">
+                                <label>تأثيرات الحركة</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="enable-animations" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- إعدادات اللغة والمنطقة -->
+                    <div class="settings-tab" id="language">
+                        <h3>إعدادات اللغة والمنطقة</h3>
+                        <div class="settings-group">
+                            <div class="setting-item">
+                                <label>اللغة</label>
+                                <select id="language-select">
+                                    <option value="ar">العربية</option>
+                                    <option value="en">English</option>
+                                    <option value="fr">Français</option>
+                                    <option value="tr">Türkçe</option>
+                                </select>
+                            </div>
+                            <div class="setting-item">
+                                <label>المنطقة الزمنية</label>
+                                <select id="timezone-select">
+                                    <option value="auto">تحديد تلقائي</option>
+                                    <option value="manual">تحديد يدوي</option>
+                                </select>
+                            </div>
+                            <div class="setting-item">
+                                <label>تنسيق التاريخ</label>
+                                <select id="date-format">
+                                    <option value="hijri">التقويم الهجري</option>
+                                    <option value="gregorian">التقويم الميلادي</option>
+                                    <option value="both">كلاهما</option>
+                                </select>
+                            </div>
+                            <div class="setting-item">
+                                <label>تنسيق الوقت</label>
+                                <select id="time-format">
+                                    <option value="12">12 ساعة</option>
+                                    <option value="24">24 ساعة</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- إعدادات البيانات والخصوصية -->
+                    <div class="settings-tab" id="data">
+                        <h3>البيانات والخصوصية</h3>
+                        <div class="settings-group">
+                            <div class="setting-item">
+                                <label>حفظ سجل القراءة</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="save-reading-history">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <label>حفظ المواقع المفضلة</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="save-favorites">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <label>مشاركة البيانات لتحسين الخدمة</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="share-analytics">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <label>حفظ البيانات محلياً فقط</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="local-storage-only" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <label>مدة الاحتفاظ بالبيانات</label>
+                                <select id="data-retention">
+                                    <option value="30">30 يوم</option>
+                                    <option value="90">90 يوم</option>
+                                    <option value="180">180 يوم</option>
+                                    <option value="365">سنة</option>
+                                    <option value="forever">للأبد</option>
+                                </select>
+                            </div>
+                            <div class="data-actions">
+                                <button class="btn danger-btn" id="clear-data">
+                                    <i class="fas fa-trash"></i>
+                                    مسح جميع البيانات
+                                </button>
+                                <button class="btn primary-btn" id="export-data">
+                                    <i class="fas fa-download"></i>
+                                    تصدير البيانات
+                                </button>
+                                <button class="btn secondary-btn" id="import-data">
+                                    <i class="fas fa-upload"></i>
+                                    استيراد البيانات
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- زر حفظ الإعدادات -->
+            <div class="settings-actions">
+                <button class="btn secondary-btn" id="reset-settings">
+                    <i class="fas fa-undo"></i>
+                    استعادة الإعدادات الافتراضية
+                </button>
+                <button class="btn primary-btn" id="save-settings">
+                    <i class="fas fa-save"></i>
+                    حفظ الإعدادات
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- القسم السفلي -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>بصائر</h3>
+                    <p>موقع إسلامي شامل يقدم المحتوى الإسلامي بطريقة عصرية وسهلة الاستخدام</p>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="index.html#quran">القرآن الكريم</a></li>
+                        <li><a href="index.html#prayer">مواقيت الصلاة</a></li>
+                        <li><a href="index.html#hadith">الأحاديث النبوية</a></li>
+                        <li><a href="index.html#azkar">الأذكار</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-envelope"></i> salmbrykrzq@gmail.com</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/1CtncPzj4R/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@SALEM.R" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                        <a href="https://wa.me/+201208569475" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 بصائر | جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/settings-manager.js"></script>
+    <script src="js/mobile-menu.js"></script>
+</body>
+</html>

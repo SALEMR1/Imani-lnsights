@@ -1,0 +1,419 @@
+/* تنسيقات محسنة لصفحة اتجاه القبلة */
+
+/* تنسيق عام لقسم القبلة */
+.qibla-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, 
+        rgba(0, 87, 61, 0.08) 0%, 
+        rgba(13, 58, 101, 0.08) 50%, 
+        rgba(0, 87, 61, 0.08) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* إضافة تأثير الموجات في خلفية القسم */
+.qibla-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, 
+        rgba(0, 87, 61, 0.05) 0%, 
+        rgba(13, 58, 101, 0.05) 50%, 
+        rgba(0, 87, 61, 0.05) 100%);
+    z-index: 0;
+}
+
+/* حاوية القبلة */
+.qibla-container {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* معلومات القبلة */
+.qibla-info {
+    position: relative;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 87, 61, 0.1);
+    transition: transform 0.4s ease;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid rgba(0, 87, 61, 0.1);
+}
+
+/* الإطار المضيء للبطاقة */
+.qibla-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(0, 87, 61, 0.03) 0%,
+        rgba(13, 58, 101, 0.05) 100%);
+    z-index: -1;
+}
+
+/* الحدود الثابتة للبطاقة */
+.qibla-info::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, 
+        #00573d 0%, 
+        #0d3a65 100%);
+    z-index: -2;
+    border-radius: 16px;
+    opacity: 0.2;
+}
+
+.qibla-info h3 {
+    color: #00573d;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.qibla-info h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(135deg, #00573d, #0d3a65);
+    border-radius: 3px;
+}
+
+.qibla-info p {
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* تفاصيل الموقع */
+.location-details {
+    background: rgba(248, 250, 252, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid rgba(0, 87, 61, 0.1);
+}
+
+.location-details p {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location-details p strong {
+    color: #00573d;
+}
+
+.location-details p span {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 5px 15px;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 87, 61, 0.1);
+    min-width: 100px;
+    text-align: center;
+}
+
+.location-details button {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #00573d, #0d3a65);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 87, 61, 0.2);
+    width: 100%;
+}
+
+.location-details button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 87, 61, 0.3);
+}
+
+/* بوصلة القبلة */
+.qibla-compass {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 87, 61, 0.1);
+    border: 1px solid rgba(0, 87, 61, 0.1);
+    overflow: hidden;
+}
+
+/* الإطار المضيء للبطاقة */
+.qibla-compass::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(0, 87, 61, 0.03) 0%,
+        rgba(13, 58, 101, 0.05) 100%);
+    z-index: 0;
+}
+
+/* الحدود الثابتة للبطاقة */
+.qibla-compass::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, 
+        #00573d 0%, 
+        #0d3a65 100%);
+    z-index: -1;
+    border-radius: 16px;
+    opacity: 0.2;
+}
+
+.compass-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    z-index: 1;
+}
+
+.compass-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 15px solid transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background: 
+        linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(135deg, #00573d, #0d3a65) border-box;
+    box-shadow: 0 0 30px rgba(0, 87, 61, 0.2);
+}
+
+.compass-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 130px;
+    background: linear-gradient(to bottom, #e74c3c, #c0392b);
+    transform: translate(-50%, -50%);
+    transform-origin: center bottom;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    transition: transform 0.5s ease;
+    z-index: 2;
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+.compass-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, #00573d, #0d3a65);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    box-shadow: 0 0 10px rgba(0, 87, 61, 0.3);
+}
+
+.compass-directions {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.direction {
+    position: absolute;
+    font-weight: bold;
+    color: #00573d;
+    font-size: 1.2rem;
+}
+
+.north {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.east {
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.south {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.west {
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+/* تعليمات استخدام البوصلة */
+.qibla-instructions {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 87, 61, 0.1);
+    border: 1px solid rgba(0, 87, 61, 0.1);
+}
+
+/* الإطار المضيء للبطاقة */
+.qibla-instructions::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(0, 87, 61, 0.03) 0%,
+        rgba(13, 58, 101, 0.05) 100%);
+    z-index: -1;
+}
+
+/* الحدود الثابتة للبطاقة */
+.qibla-instructions::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, 
+        #00573d 0%, 
+        #0d3a65 100%);
+    z-index: -2;
+    border-radius: 16px;
+    opacity: 0.2;
+}
+
+.qibla-instructions h3 {
+    color: #00573d;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.qibla-instructions h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(135deg, #00573d, #0d3a65);
+    border-radius: 3px;
+}
+
+.qibla-instructions ol {
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+.qibla-instructions ol li {
+    margin-bottom: 10px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.qibla-note {
+    background: rgba(248, 250, 252, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid rgba(0, 87, 61, 0.1);
+}
+
+.qibla-note p {
+    color: #333;
+    margin: 0;
+}
+
+.qibla-note p strong {
+    color: #00573d;
+}
+
+/* تنسيقات للأجهزة المحمولة */
+@media (max-width: 992px) {
+    .qibla-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .compass-container {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .qibla-info, .qibla-compass, .qibla-instructions {
+        padding: 20px;
+    }
+    
+    .compass-container {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .compass-arrow {
+        height: 100px;
+    }
+    
+    .compass-ring {
+        border-width: 10px;
+    }
+    
+    .compass-center {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .direction {
+        font-size: 1rem;
+    }
+}

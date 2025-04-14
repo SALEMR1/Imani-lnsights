@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بصائر - اختبر معلوماتك</title>
+    <link rel="stylesheet" href="css/enhanced-theme.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/enhanced-quiz.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/touch-enhancements.css">
+</head>
+<body class="islamic-pattern">
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-mosque"></i>
+                    <h1>بصائر</h1>
+                </a>
+                <a href="index.html" class="btn">
+                    <i class="fas fa-home"></i>
+                    العودة للرئيسية
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <div class="quiz-container animate-in">
+                <div class="quiz-header">
+                    <h1>
+                        <i class="fas fa-brain"></i>
+                        اختبر معلوماتك الإسلامية
+                    </h1>
+                    <div class="quiz-info">
+                        <div class="score-container">
+                            <i class="fas fa-star"></i>
+                            <span class="score">النقاط: <span id="score">0</span></span>
+                        </div>
+                        <div class="progress-container">
+                            <i class="fas fa-tasks"></i>
+                            <span class="question-number">السؤال: <span id="current-question">1</span>/<span id="total-questions">10</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quiz-content">
+                    <div id="question-container" class="scroll-reveal">
+                        <h2 id="question-text">السؤال يظهر هنا</h2>
+                        <div class="options" id="options-container">
+                            <!-- Options will be inserted here dynamically -->
+                        </div>
+                    </div>
+
+                    <div class="quiz-controls">
+                        <button id="next-btn" class="btn" disabled>
+                            <i class="fas fa-arrow-left"></i>
+                            السؤال التالي
+                        </button>
+                        <button id="restart-btn" class="btn btn-secondary" style="display: none;">
+                            <i class="fas fa-redo"></i>
+                            إعادة اللعب
+                        </button>
+                    </div>
+                </div>
+
+                <div id="result-container" class="scroll-reveal" style="display: none;">
+                    <h2>نتيجة الاختبار</h2>
+                    <div class="result-content">
+                        <div class="result-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <p>الإجابات الصحيحة: <span id="correct-answers">0</span></p>
+                        <p>النسبة المئوية: <span id="percentage">0</span>%</p>
+                        <div id="message"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>بصائر</h3>
+                    <p>موقع إسلامي شامل للمعرفة والتعلم</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // إضافة تأثيرات التمرير
+        const scrollReveal = document.querySelectorAll('.scroll-reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        scrollReveal.forEach(element => observer.observe(element));
+
+        // التأكد من وجود مجلد data
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            if (msg.includes('quiz-questions.json')) {
+                document.getElementById('options-container').innerHTML = `
+                    <div class="error-message">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>عذراً، حدث خطأ في تحميل الأسئلة</p>
+                        <p>يرجى التأكد من وجود ملف الأسئلة في المسار الصحيح</p>
+                    </div>
+                `;
+            }
+            return false;
+        };
+    </script>
+    <script src="js/quiz.js"></script>
+</body>
+</html> 

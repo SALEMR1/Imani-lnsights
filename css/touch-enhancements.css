@@ -1,0 +1,91 @@
+/* تحسينات استجابة اللمس للأجهزة المحمولة */
+
+/* تحسينات عامة لجميع الأجهزة اللمسية */
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+/* تحسين مساحة النقر للأزرار والروابط */
+button, 
+a, 
+.btn, 
+[role="button"], 
+input[type="button"], 
+input[type="submit"] {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 10px 15px;
+    touch-action: manipulation;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* تأثير اللمس للأزرار والروابط */
+.touch-active {
+    opacity: 0.8;
+    transform: scale(0.98);
+}
+
+/* تحسين تأثير النقر */
+button:active, 
+a:active, 
+.btn:active, 
+[role="button"]:active, 
+input[type="button"]:active, 
+input[type="submit"]:active {
+    opacity: 0.8;
+    transform: scale(0.98);
+}
+
+/* تحسين استجابة القائمة */
+@media (max-width: 768px) {
+    /* تحسين زر القائمة */
+    .menu-toggle {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 10px;
+        z-index: 1001;
+    }
+    
+    /* تحسين روابط القائمة */
+    nav ul li a {
+        display: block;
+        padding: 15px 20px;
+        min-height: 44px;
+    }
+    
+    /* تحسين مساحة النقر للأزرار في الأقسام المختلفة */
+    .quran-section button,
+    .prayer-section button,
+    .azkar-section button,
+    .articles-section button,
+    .fatawa-section button,
+    .tasbih-page button {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 10px 15px;
+        margin: 5px;
+    }
+    
+    /* تحسين أزرار التبويب */
+    .tab, .azkar-tab {
+        min-height: 44px;
+        min-width: 80px;
+        padding: 10px 15px;
+    }
+}
+
+/* تحسين استجابة الأزرار في الأقسام المختلفة */
+.quran-controls button,
+.prayer-controls button,
+.azkar-tabs button,
+.share-buttons a,
+.social-footer a {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

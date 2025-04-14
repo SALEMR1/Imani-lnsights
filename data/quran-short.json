@@ -1,0 +1,199 @@
+{
+  "surahs": [
+    {
+      "number": 1,
+      "name": "الفاتحة",
+      "englishName": "Al-Faatiha",
+      "englishNameTranslation": "The Opening",
+      "numberOfAyahs": 7,
+      "ayahs": [
+        {
+          "number": 1,
+          "text": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+          "numberInSurah": 1
+        },
+        {
+          "number": 2,
+          "text": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+          "numberInSurah": 2
+        },
+        {
+          "number": 3,
+          "text": "الرَّحْمَٰنِ الرَّحِيمِ",
+          "numberInSurah": 3
+        },
+        {
+          "number": 4,
+          "text": "مَالِكِ يَوْمِ الدِّينِ",
+          "numberInSurah": 4
+        },
+        {
+          "number": 5,
+          "text": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+          "numberInSurah": 5
+        },
+        {
+          "number": 6,
+          "text": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+          "numberInSurah": 6
+        },
+        {
+          "number": 7,
+          "text": "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+          "numberInSurah": 7
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "name": "البقرة",
+      "englishName": "Al-Baqara",
+      "englishNameTranslation": "The Cow",
+      "numberOfAyahs": 286,
+      "ayahs": [
+        {
+          "number": 8,
+          "text": "الم",
+          "numberInSurah": 1
+        },
+        {
+          "number": 9,
+          "text": "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ",
+          "numberInSurah": 2
+        },
+        {
+          "number": 10,
+          "text": "الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ وَيُقِيمُونَ الصَّلَاةَ وَمِمَّا رَزَقْنَاهُمْ يُنفِقُونَ",
+          "numberInSurah": 3
+        },
+        {
+          "number": 11,
+          "text": "وَالَّذِينَ يُؤْمِنُونَ بِمَا أُنزِلَ إِلَيْكَ وَمَا أُنزِلَ مِن قَبْلِكَ وَبِالْآخِرَةِ هُمْ يُوقِنُونَ",
+          "numberInSurah": 4
+        },
+        {
+          "number": 12,
+          "text": "أُولَٰئِكَ عَلَىٰ هُدًى مِّن رَّبِّهِمْ ۖ وَأُولَٰئِكَ هُمُ الْمُفْلِحُونَ",
+          "numberInSurah": 5
+        }
+      ]
+    },
+    {
+      "number": 112,
+      "name": "الإخلاص",
+      "englishName": "Al-Ikhlaas",
+      "englishNameTranslation": "Sincerity",
+      "numberOfAyahs": 4,
+      "ayahs": [
+        {
+          "number": 6222,
+          "text": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+          "numberInSurah": 0
+        },
+        {
+          "number": 6223,
+          "text": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+          "numberInSurah": 1
+        },
+        {
+          "number": 6224,
+          "text": "اللَّهُ الصَّمَدُ",
+          "numberInSurah": 2
+        },
+        {
+          "number": 6225,
+          "text": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+          "numberInSurah": 3
+        },
+        {
+          "number": 6226,
+          "text": "وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
+          "numberInSurah": 4
+        }
+      ]
+    },
+    {
+      "number": 113,
+      "name": "الفلق",
+      "englishName": "Al-Falaq",
+      "englishNameTranslation": "The Daybreak",
+      "numberOfAyahs": 5,
+      "ayahs": [
+        {
+          "number": 6227,
+          "text": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+          "numberInSurah": 0
+        },
+        {
+          "number": 6228,
+          "text": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
+          "numberInSurah": 1
+        },
+        {
+          "number": 6229,
+          "text": "مِن شَرِّ مَا خَلَقَ",
+          "numberInSurah": 2
+        },
+        {
+          "number": 6230,
+          "text": "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ",
+          "numberInSurah": 3
+        },
+        {
+          "number": 6231,
+          "text": "وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ",
+          "numberInSurah": 4
+        },
+        {
+          "number": 6232,
+          "text": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+          "numberInSurah": 5
+        }
+      ]
+    },
+    {
+      "number": 114,
+      "name": "الناس",
+      "englishName": "An-Naas",
+      "englishNameTranslation": "Mankind",
+      "numberOfAyahs": 6,
+      "ayahs": [
+        {
+          "number": 6233,
+          "text": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+          "numberInSurah": 0
+        },
+        {
+          "number": 6234,
+          "text": "قُلْ أَعُوذُ بِرَبِّ النَّاسِ",
+          "numberInSurah": 1
+        },
+        {
+          "number": 6235,
+          "text": "مَلِكِ النَّاسِ",
+          "numberInSurah": 2
+        },
+        {
+          "number": 6236,
+          "text": "إِلَٰهِ النَّاسِ",
+          "numberInSurah": 3
+        },
+        {
+          "number": 6237,
+          "text": "مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ",
+          "numberInSurah": 4
+        },
+        {
+          "number": 6238,
+          "text": "الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ",
+          "numberInSurah": 5
+        },
+        {
+          "number": 6239,
+          "text": "مِنَ الْجِنَّةِ وَالنَّاسِ",
+          "numberInSurah": 6
+        }
+      ]
+    }
+  ]
+}

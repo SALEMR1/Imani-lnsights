@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الفتاوى الإسلامية | بصائر - موقع إسلامي شامل</title>
+    <meta name="description" content="تصفح مجموعة من الفتاوى الإسلامية الموثوقة في مختلف أبواب الفقه الإسلامي، العبادات والمعاملات والأحوال الشخصية وغيرها من المسائل الشرعية">
+    <meta name="keywords" content="فتاوى إسلامية، فتاوى شرعية، أحكام فقهية، فتاوى العبادات، فتاوى المعاملات، فتاوى الأسرة، بصائر">
+    <meta name="author" content="سالم رزق">
+    <meta property="og:title" content="الفتاوى الإسلامية | بصائر">
+    <meta property="og:description" content="تصفح مجموعة من الفتاوى الإسلامية الموثوقة في مختلف أبواب الفقه الإسلامي، العبادات والمعاملات والأحوال الشخصية وغيرها من المسائل الشرعية">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://basaer-islamic.com/fatawa.html">
+    <meta property="og:image" content="https://basaer-islamic.com/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="الفتاوى الإسلامية | بصائر">
+    <meta name="twitter:description" content="تصفح مجموعة من الفتاوى الإسلامية الموثوقة في مختلف أبواب الفقه الإسلامي، العبادات والمعاملات والأحوال الشخصية وغيرها من المسائل الشرعية">
+    <link rel="canonical" href="https://basaer-islamic.com/fatawa.html">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fatawa.css">
+    <link rel="stylesheet" href="css/enhanced-fatawa.css">
+    <link rel="stylesheet" href="css/enhanced-header.css">
+    <link rel="stylesheet" href="css/enhanced-buttons.css">
+    <link rel="stylesheet" href="css/enhanced-backgrounds.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <link rel="stylesheet" href="css/mobile-enhancements.css">
+    <link rel="stylesheet" href="css/social-icons.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/touch-enhancements.css">
+</head>
+<body class="fatawa-page">
+    <!-- القسم العلوي -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-mosque"></i>
+                <h1>بصائر</h1>
+            </div>
+            <button class="menu-toggle" aria-label="تبديل القائمة" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                    <li><a href="index.html#quran"><i class="fas fa-book-quran"></i> القرآن الكريم</a></li>
+                    <li><a href="index.html#prayer"><i class="fas fa-clock"></i> مواقيت الصلاة</a></li>
+                    <li><a href="index.html#hadith"><i class="fas fa-scroll"></i> الأحاديث</a></li>
+                    <li><a href="index.html#azkar"><i class="fas fa-pray"></i> الأذكار</a></li>
+                    <li><a href="qibla.html"><i class="fas fa-compass"></i> القبلة</a></li>
+                    <li><a href="articles.html"><i class="fas fa-newspaper"></i> المقالات</a></li>
+                    <li><a href="fatawa.html" class="active"><i class="fas fa-gavel"></i> الفتاوى</a></li>
+                    <li><a href="tasbih.html"><i class="fas fa-hands-praying"></i> المسبحة</a></li>
+                    <li><a href="quiz.html"><i class="fas fa-graduation-cap"></i> اختبر معلوماتك</a></li>
+                    <li><a href="settings.html"><i class="fas fa-cog"></i> الإعدادات</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- قسم الفتاوى -->
+    <section class="fatawa-section">
+        <div class="container">
+            <h2 class="section-title">الفتاوى الإسلامية</h2>
+            
+            <!-- قسم البحث والتصفية -->
+            <div class="fatawa-header">
+                <div class="search-container">
+                    <input type="text" id="fatawa-search" placeholder="ابحث في الفتاوى...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="filter-options">
+                    <select id="category-filter">
+                        <option value="all">جميع الفئات</option>
+                        <option value="salah">الصلاة</option>
+                        <option value="zakat">الزكاة</option>
+                        <option value="sawm">الصيام</option>
+                        <option value="hajj">الحج والعمرة</option>
+                        <option value="nikah">النكاح والطلاق</option>
+                        <option value="muamalat">المعاملات</option>
+                        <option value="other">فتاوى متنوعة</option>
+                    </select>
+                    <select id="scholar-filter">
+                        <option value="all">جميع العلماء</option>
+                        <option value="bin-baz">ابن باز</option>
+                        <option value="ibn-uthaymeen">ابن عثيمين</option>
+                        <option value="al-albani">الألباني</option>
+                        <option value="al-fawzan">الفوزان</option>
+                        <option value="al-uthaymin">العثيمين</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- قائمة الفتاوى -->
+            <div class="fatawa-list">
+                <!-- فتوى الصلاة -->
+                <div class="fatwa-card" data-category="salah" data-scholar="ibn-uthaymeen">
+                    <div class="fatwa-header">
+                        <h3 class="fatwa-title">حكم صلاة الجماعة في المسجد</h3>
+                        <div class="fatwa-meta">
+                            <span class="fatwa-category">الصلاة</span>
+                            <span class="fatwa-scholar">الشيخ ابن عثيمين</span>
+                        </div>
+                    </div>
+                    <div class="fatwa-content">
+                        <div class="fatwa-question">
+                            <h4><i class="fas fa-question-circle"></i> السؤال:</h4>
+                            <p>ما حكم صلاة الجماعة في المسجد؟ وهل يجوز التخلف عنها؟</p>
+                        </div>
+                        <div class="fatwa-answer">
+                            <h4><i class="fas fa-comment-dots"></i> الجواب:</h4>
+                            <p>صلاة الجماعة في المسجد واجبة على الرجال، وهو قول جمهور أهل العلم، لقول النبي صلى الله عليه وسلم: "من سمع النداء فلم يأت فلا صلاة له إلا من عذر"، ولا يجوز التخلف عنها إلا لعذر شرعي كالمرض الذي يشق معه الذهاب إلى المسجد، أو الخوف من ضرر يلحق بالنفس أو المال، أو المطر الشديد والريح الشديدة في الليلة المظلمة، ونحو ذلك من الأعذار الشرعية.</p>
+                            <p>والدليل على وجوبها ما رواه أبو هريرة رضي الله عنه أن النبي صلى الله عليه وسلم قال: "والذي نفسي بيده لقد هممت أن آمر بحطب فيحطب، ثم آمر بالصلاة فيؤذن لها، ثم آمر رجلاً فيؤم الناس، ثم أخالف إلى رجال فأحرق عليهم بيوتهم". متفق عليه.</p>
+                        </div>
+                        <div class="fatwa-reference">
+                            <p>المصدر: مجموع فتاوى ورسائل الشيخ محمد بن صالح العثيمين، المجلد 12، ص 241.</p>
+                        </div>
+                    </div>
+                    <div class="fatwa-footer">
+                        <div class="fatwa-actions">
+                            <button class="btn share-btn"><i class="fas fa-share-alt"></i> مشاركة</button>
+                            <button class="btn save-btn"><i class="far fa-bookmark"></i> حفظ</button>
+                        </div>
+                        <div class="fatwa-date">تاريخ الفتوى: 15 رمضان 1420هـ</div>
+                    </div>
+                </div>
+                
+                <!-- فتوى الزكاة -->
+                <div class="fatwa-card" data-category="zakat" data-scholar="bin-baz">
+                    <div class="fatwa-header">
+                        <h3 class="fatwa-title">زكاة الحلي المستعمل من الذهب</h3>
+                        <div class="fatwa-meta">
+                            <span class="fatwa-category">الزكاة</span>
+                            <span class="fatwa-scholar">الشيخ عبد العزيز بن باز</span>
+                        </div>
+                    </div>
+                    <div class="fatwa-content">
+                        <div class="fatwa-question">
+                            <h4><i class="fas fa-question-circle"></i> السؤال:</h4>
+                            <p>هل تجب الزكاة في الحلي المستعمل من الذهب؟</p>
+                        </div>
+                        <div class="fatwa-answer">
+                            <h4><i class="fas fa-comment-dots"></i> الجواب:</h4>
+                            <p>الصحيح من قولي العلماء أن الزكاة واجبة في الحلي المستعمل من الذهب إذا بلغ النصاب وحال عليه الحول، وهو قول جمع من الصحابة منهم عمر وابن عمر وابن عباس رضي الله عنهم، وهو مذهب أبي حنيفة.</p>
+                            <p>والدليل على ذلك عموم قوله تعالى: "والذين يكنزون الذهب والفضة ولا ينفقونها في سبيل الله فبشرهم بعذاب أليم"، وعموم قوله صلى الله عليه وسلم: "ما من صاحب ذهب ولا فضة لا يؤدي منها حقها إلا من عذر"، وما ثبت عن النبي صلى الله عليه وسلم أنه رأى في يد امرأة مسكتين من ذهب فقال: "أتعطين زكاة هذا؟" قالت: لا، قال: "أيسرك أن يسورك الله بهما يوم القيامة سوارين من نار؟" فألقتهما.</p>
+                        </div>
+                        <div class="fatwa-reference">
+                            <p>المصدر: مجموع فتاوى ومقالات متنوعة للشيخ عبد العزيز بن باز، المجلد 14، ص 135.</p>
+                        </div>
+                    </div>
+                    <div class="fatwa-footer">
+                        <div class="fatwa-actions">
+                            <button class="btn share-btn"><i class="fas fa-share-alt"></i> مشاركة</button>
+                            <button class="btn save-btn"><i class="far fa-bookmark"></i> حفظ</button>
+                        </div>
+                        <div class="fatwa-date">تاريخ الفتوى: 5 شوال 1415هـ</div>
+                    </div>
+                </div>
+                
+                <!-- فتوى الصيام -->
+                <div class="fatwa-card" data-category="sawm" data-scholar="al-albani">
+                    <div class="fatwa-header">
+                        <h3 class="fatwa-title">حكم من أفطر في رمضان متعمداً</h3>
+                        <div class="fatwa-meta">
+                            <span class="fatwa-category">الصيام</span>
+                            <span class="fatwa-scholar">الشيخ الألباني</span>
+                        </div>
+                    </div>
+                    <div class="fatwa-content">
+                        <div class="fatwa-question">
+                            <h4><i class="fas fa-question-circle"></i> السؤال:</h4>
+                            <p>ما حكم من أفطر في رمضان متعمداً بدون عذر شرعي؟ وما الذي يجب عليه؟</p>
+                        </div>
+                        <div class="fatwa-answer">
+                            <h4><i class="fas fa-comment-dots"></i> الجواب:</h4>
+                            <p>من أفطر في رمضان متعمداً بدون عذر شرعي فقد ارتكب كبيرة من كبائر الذنوب، ويجب عليه التوبة النصوح إلى الله تعالى، والندم على ما فعل، والعزم على عدم العودة إلى مثل ذلك، وقضاء اليوم الذي أفطره.</p>
+                            <p>أما الكفارة المغلظة (عتق رقبة، فإن لم يجد فصيام شهرين متتابعين، فإن لم يستطع فإطعام ستين مسكيناً) فإنها تجب على من أفطر بالجماع خاصة، أما من أفطر بالأكل أو الشرب متعمداً فعليه القضاء فقط مع التوبة.</p>
+                            <p>وقد روى أبو هريرة رضي الله عنه أن النبي صلى الله عليه وسلم قال: "من أفطر يوماً من رمضان من غير رخصة ولا مرض، لم يقضه صيام الدهر كله وإن صامه". رواه الترمذي وأبو داود والنسائي وابن ماجه، وصححه الألباني.</p>
+                        </div>
+                        <div class="fatwa-reference">
+                            <p>المصدر: سلسلة الهدى والنور، الشريط رقم 215.</p>
+                        </div>
+                    </div>
+                    <div class="fatwa-footer">
+                        <div class="fatwa-actions">
+                            <button class="btn share-btn"><i class="fas fa-share-alt"></i> مشاركة</button>
+                            <button class="btn save-btn"><i class="far fa-bookmark"></i> حفظ</button>
+                        </div>
+                        <div class="fatwa-date">تاريخ الفتوى: 20 شعبان 1418هـ</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- زر تحميل المزيد -->
+            <div class="load-more">
+                <button id="load-more-btn" class="btn">تحميل المزيد من الفتاوى</button>
+            </div>
+            
+            <!-- قسم طلب فتوى جديدة -->
+            <div class="request-fatwa">
+                <h3>طلب فتوى جديدة</h3>
+                <p>إذا كان لديك سؤال شرعي وترغب في الحصول على فتوى من علماء موثوقين، يمكنك إرسال سؤالك من خلال النموذج أدناه:</p>
+                <form id="fatwa-request-form">
+                    <div class="form-group">
+                        <label for="question-category">القسم:</label>
+                        <select id="question-category" required>
+                            <option value="">اختر القسم</option>
+                            <option value="salah">الصلاة</option>
+                            <option value="zakat">الزكاة</option>
+                            <option value="sawm">الصيام</option>
+                            <option value="hajj">الحج والعمرة</option>
+                            <option value="nikah">النكاح والطلاق</option>
+                            <option value="muamalat">المعاملات</option>
+                            <option value="other">أخرى</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question-title">عنوان السؤال:</label>
+                        <input type="text" id="question-title" placeholder="أدخل عنوان السؤال هنا..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="question-content">نص السؤال:</label>
+                        <textarea id="question-content" rows="6" placeholder="اكتب سؤالك بالتفصيل هنا..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">البريد الإلكتروني (اختياري):</label>
+                        <input type="email" id="contact-email" placeholder="أدخل بريدك الإلكتروني لاستلام الإجابة...">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn primary-btn">إرسال السؤال</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- القسم السفلي -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>بصائر</h3>
+                    <p>موقع إسلامي شامل يقدم المحتوى الإسلامي بطريقة عصرية وسهلة الاستخدام</p>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="index.html#quran">القرآن الكريم</a></li>
+                        <li><a href="index.html#prayer">مواقيت الصلاة</a></li>
+                        <li><a href="index.html#hadith">الأحاديث النبوية</a></li>
+                        <li><a href="index.html#azkar">الأذكار</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-envelope"></i> salmbrykrzq@gmail.com</li>
+                    </ul>
+                    <div class="social-footer">
+                        <a href="https://www.facebook.com/share/1CtncPzj4R/" target="_blank" rel="noopener noreferrer" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@SALEM.R" target="_blank" rel="noopener noreferrer" aria-label="يوتيوب"><i class="fab fa-youtube"></i></a>
+                        <a href="https://wa.me/+201208569475" target="_blank" rel="noopener noreferrer" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 بصائر | جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/fatawa.js"></script>
+    <script src="js/mobile-menu.js"></script>
+</body>
+</html>

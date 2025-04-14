@@ -1,0 +1,519 @@
+/* ===== المتغيرات الأساسية ===== */
+:root {
+    --primary-color: #2B4C7E;
+    --primary-dark: #1B3B6F;
+    --primary-light: #7C9DC7;
+    --secondary-color: #56A45E;
+    --secondary-dark: #2E7D32;
+    --accent-color: #FF9642;
+    --text-color: #2C3E50;
+    --text-light: #7F8C8D;
+    --bg-color: #E8ECF3;
+    --base-white: #E8ECF3;
+    --soft-white: #E1E7EF;
+    --warm-white: #E9E6E0;
+    --cool-white: #E4EAF1;
+    --cream-white: #EAE6E0;
+    --pearl-white: #E5EAF0;
+    --bg-gradient-1: linear-gradient(135deg, #E8ECF3 0%, #D8E0E9 100%);
+    --bg-gradient-2: linear-gradient(45deg, #E9E6E0 0%, #E1E7EF 100%);
+    --bg-gradient-3: linear-gradient(to right, #E4EAF1 0%, #DCE4ED 100%);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --transition: all 0.3s ease;
+    --pattern-color1: rgba(43, 76, 126, 0.12);
+    --pattern-color2: rgba(86, 164, 94, 0.12);
+    --pattern-color3: rgba(255, 150, 66, 0.12);
+    --gradient-1: linear-gradient(135deg, #2B4C7E 0%, #1B3B6F 100%);
+    --gradient-2: linear-gradient(45deg, #56A45E 0%, #2E7D32 100%);
+    --gradient-3: linear-gradient(to right, #FF9642 0%, #FFB75E 100%);
+}
+
+/* ===== التصميم العام ===== */
+body {
+    font-family: 'Tajawal', sans-serif;
+    background: var(--bg-gradient-1);
+    color: var(--text-color);
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: 
+        linear-gradient(120deg, var(--pattern-color1) 0%, transparent 60%),
+        linear-gradient(240deg, var(--pattern-color2) 0%, transparent 60%),
+        linear-gradient(0deg, var(--pattern-color3) 0%, transparent 60%),
+        repeating-linear-gradient(45deg, 
+            rgba(43, 76, 126, 0.05) 0px,
+            rgba(43, 76, 126, 0.05) 2px,
+            transparent 2px,
+            transparent 20px
+        ),
+        repeating-linear-gradient(-45deg,
+            rgba(86, 164, 94, 0.05) 0px,
+            rgba(86, 164, 94, 0.05) 2px,
+            transparent 2px,
+            transparent 20px
+        ),
+        repeating-radial-gradient(circle at 50% 50%,
+            rgba(255, 150, 66, 0.03) 0,
+            rgba(255, 150, 66, 0.03) 1px,
+            transparent 1px,
+            transparent 15px
+        );
+    opacity: 1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== القسم العلوي ===== */
+header {
+    background: var(--bg-gradient-2);
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.logo i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+/* ===== القسم الرئيسي ===== */
+.hero {
+    background-image: 
+        linear-gradient(135deg, rgba(27, 59, 111, 0.95) 0%, rgba(43, 76, 126, 0.85) 100%),
+        repeating-linear-gradient(45deg, 
+            rgba(237, 241, 245, 0.08) 0px,
+            rgba(237, 241, 245, 0.08) 2px,
+            transparent 2px,
+            transparent 20px
+        ),
+        repeating-linear-gradient(-45deg,
+            rgba(237, 241, 245, 0.08) 0px,
+            rgba(237, 241, 245, 0.08) 2px,
+            transparent 2px,
+            transparent 20px
+        ),
+        radial-gradient(circle at 50% 50%,
+            rgba(237, 241, 245, 0.05) 0,
+            transparent 60%
+        );
+    background-size: cover, 30px 30px, 30px 30px, cover;
+    background-position: center;
+    color: var(--soft-white);
+    padding: 6rem 0;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* ===== البطاقات ===== */
+.card {
+    background: var(--bg-gradient-3);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(45deg, 
+            rgba(43, 76, 126, 0.08) 25%, 
+            transparent 25%
+        ),
+        linear-gradient(-45deg, 
+            rgba(86, 164, 94, 0.08) 25%, 
+            transparent 25%
+        ),
+        repeating-radial-gradient(circle at 25% 25%,
+            rgba(255, 150, 66, 0.03) 0,
+            rgba(255, 150, 66, 0.03) 1px,
+            transparent 1px,
+            transparent 10px
+        );
+    background-size: 20px 20px, 20px 20px, 40px 40px;
+    z-index: -1;
+    opacity: 1;
+    transition: var(--transition);
+}
+
+.card:hover::before {
+    opacity: 0.9;
+    background-size: 25px 25px, 25px 25px, 50px 50px;
+    transform: scale(1.05);
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+    background: var(--bg-gradient-2);
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* ===== الأزرار ===== */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--radius-md);
+    background: var(--primary-color);
+    color: var(--soft-white);
+    text-decoration: none;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background: var(--secondary-dark);
+}
+
+/* ===== الشبكة ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+/* ===== القسم السفلي ===== */
+footer {
+    background: var(--primary-dark);
+    color: var(--soft-white);
+    padding: 3rem 0;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+/* ===== تحسينات للهواتف ===== */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== الرسوم المتحركة ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* ===== تأثيرات التمرير ===== */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: var(--transition);
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== تحسينات إضافية ===== */
+.section {
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 100% 100%, var(--pattern-color1) 0, transparent 50%),
+        radial-gradient(circle at 0% 0%, var(--pattern-color2) 0, transparent 50%),
+        repeating-linear-gradient(45deg,
+            rgba(43, 76, 126, 0.05) 0px,
+            rgba(43, 76, 126, 0.05) 2px,
+            transparent 2px,
+            transparent 15px
+        ),
+        repeating-linear-gradient(-45deg,
+            rgba(86, 164, 94, 0.05) 0px,
+            rgba(86, 164, 94, 0.05) 2px,
+            transparent 2px,
+            transparent 15px
+        );
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* ===== خلفيات إسلامية ===== */
+.islamic-pattern {
+    background-image: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M20 0L40 20L20 40L0 20L20 0z" fill="%231F6E8C" fill-opacity="0.05"/></svg>');
+    background-repeat: repeat;
+}
+
+/* ===== القائمة الرئيسية ===== */
+nav {
+    display: flex;
+    align-items: center;
+    background: var(--bg-gradient-2);
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+nav ul li a i {
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--primary-color);
+    background: var(--bg-gradient-1);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: var(--transition);
+}
+
+.menu-toggle:hover {
+    color: var(--primary-dark);
+}
+
+.menu-toggle.active {
+    color: var(--primary-dark);
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* تحسينات للهواتف */
+@media (max-width: 991px) {
+    .menu-toggle {
+        display: block;
+        z-index: 1000;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: var(--bg-gradient-2);
+        padding: 80px 20px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: var(--transition);
+        z-index: 999;
+        box-shadow: var(--shadow-lg);
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        padding: 1rem;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+        background: var(--bg-gradient-1);
+    }
+}
+
+/* ===== نمط الخلفية الهندسية ===== */
+.geometric-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: 
+        linear-gradient(135deg, rgba(43, 76, 126, 0.15) 0%, transparent 100%),
+        linear-gradient(45deg, rgba(86, 164, 94, 0.15) 0%, transparent 100%),
+        repeating-linear-gradient(45deg,
+            rgba(43, 76, 126, 0.08) 0px,
+            rgba(43, 76, 126, 0.08) 2px,
+            transparent 2px,
+            transparent 15px
+        ),
+        repeating-linear-gradient(-45deg,
+            rgba(86, 164, 94, 0.08) 0px,
+            rgba(86, 164, 94, 0.08) 2px,
+            transparent 2px,
+            transparent 15px
+        ),
+        repeating-radial-gradient(circle at 75% 75%,
+            rgba(255, 150, 66, 0.05) 0,
+            rgba(255, 150, 66, 0.05) 1px,
+            transparent 1px,
+            transparent 12px
+        );
+} 

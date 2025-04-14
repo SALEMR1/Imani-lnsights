@@ -1,0 +1,215 @@
+/* تنسيقات تفسير القرآن الكريم */
+
+/* نافذة التفسير */
+.tafseer-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+}
+
+.tafseer-content {
+    background-color: var(--card-bg, #fff);
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.tafseer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color, #ddd);
+}
+
+.tafseer-header h3 {
+    margin: 0;
+    color: var(--primary-color, #4caf50);
+    font-size: 1.5rem;
+}
+
+.close-tafseer {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text-color, #333);
+}
+
+.ayah-container {
+    background-color: rgba(76, 175, 80, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.ayah-text {
+    font-size: 1.3rem;
+    line-height: 2;
+    margin-bottom: 10px;
+    font-family: 'Amiri', 'Traditional Arabic', serif;
+}
+
+.ayah-info {
+    font-size: 0.9rem;
+    color: var(--secondary-color, #2e7d32);
+    text-align: left;
+    margin: 0;
+}
+
+.tafseer-text {
+    margin-bottom: 20px;
+}
+
+.tafseer-text h4 {
+    color: var(--primary-color, #4caf50);
+    margin-bottom: 10px;
+}
+
+.tafseer-text p {
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.tafseer-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color, #ddd);
+}
+
+#tafseer-source {
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color, #ddd);
+    background-color: var(--bg-color, #f8f8f8);
+    color: var(--text-color, #333);
+    font-size: 0.9rem;
+}
+
+/* تنسيق التفسير المضمن مع الآيات */
+.ayah-tafseer {
+    background-color: rgba(76, 175, 80, 0.05);
+    padding: 15px;
+    margin: 10px 0 20px 0;
+    border-right: 3px solid var(--primary-color, #4caf50);
+    border-radius: 0 8px 8px 0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.tafseer-source {
+    font-size: 0.8rem;
+    color: var(--secondary-color, #2e7d32);
+    text-align: left;
+    margin-top: 10px;
+}
+
+/* زر تبديل التفسير */
+.tafseer-toggle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.tafseer-toggle-text {
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
+
+/* تنسيق مفتاح التبديل */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color, #4caf50);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--primary-color, #4caf50);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 24px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* تحسينات للأجهزة المحمولة */
+@media (max-width: 768px) {
+    .tafseer-content {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .ayah-text {
+        font-size: 1.1rem;
+    }
+    
+    .tafseer-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #tafseer-source {
+        width: 100%;
+    }
+    
+    #change-tafseer {
+        width: 100%;
+    }
+}
