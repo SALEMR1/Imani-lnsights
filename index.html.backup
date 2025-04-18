@@ -359,11 +359,10 @@
                     <!-- سيتم تحميل أذكار النوم هنا بواسطة JavaScript -->
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- قسم المقالات الإسلامية -->
-    <section id="articles" class="articles-section">
+            <div class="azkar-grid">
+                <div class="zikr-card">
+                    <div class="zikr-text">
+                        <p>قراءة سورة الفاتحة: ﴿الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ الرَّحْمَٰنِ الرَّحِيمِ مَالِكِ يَوْمِ الدِّينِ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ﴾</p>
         <div class="container">
             <h2 class="section-title">مقالات إسلامية</h2>
             <div class="articles-grid">
@@ -468,11 +467,7 @@
     <script src="js/responsive-images.js"></script>
     <!-- ملفات المحتوى -->
     <script src="js/prayer-times.js"></script>
-    <script src="js/azkar-tabs.js"></script>
-    <script src="js/morning-azkar.js"></script>
-    <script src="js/evening-azkar.js"></script>
-    <script src="js/prayer-azkar.js"></script>
-    <script src="js/sleep-azkar.js"></script>
+    <script src="js/script-azkar.js"></script>
     <script src="js/quran-audio.js"></script>
     <!-- ملف الأحاديث النبوية -->
     <script src="js/hadith-viewer.js"></script>
