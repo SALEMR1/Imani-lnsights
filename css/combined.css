@@ -1,0 +1,35 @@
+/* 
+ * ملف CSS مُجمّع لتحسين أداء الموقع
+ * يجمع هذا الملف الأنماط الأساسية من ملفات CSS المتعددة
+ * لتقليل عدد طلبات HTTP وتحسين سرعة التحميل
+ */
+
+/* استيراد الخطوط */
+@import url('fonts.css');
+
+/* الأنماط الأساسية */
+@import url('styles.css');
+
+/* أنماط الصفحة الرئيسية */
+@import url('home-enhanced.css');
+
+/* أنماط العناصر المختلفة */
+@import url('enhanced-header.css');
+@import url('enhanced-buttons.css');
+@import url('enhanced-backgrounds.css');
+@import url('enhanced-features.css');
+
+/* أنماط المحتوى الديني */
+@import url('enhanced-quran.css');
+@import url('enhanced-prayer.css');
+@import url('enhanced-hadith.css');
+@import url('enhanced-azkar.css');
+
+/* أنماط إضافية */
+@import url('social-icons.css');
+
+/* أنماط الصور المتجاوبة */
+@import url('responsive-images.css');
+
+/* أنماط محسنة للأجهزة المحمولة */
+@import url('mobile-optimized.css');

@@ -13,6 +13,7 @@
     text-align: center;
     padding: 80px 0;
     overflow: hidden;
+    will-change: background-position;
 }
 
 @keyframes gradientBG {
@@ -56,6 +57,7 @@
     font-weight: normal;
     letter-spacing: 1px;
     animation: glow 3s ease-in-out infinite alternate;
+    will-change: text-shadow;
 }
 
 @keyframes glow {
@@ -143,6 +145,7 @@
 .hero-feature:hover {
     background-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-5px);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .hero-feature i {

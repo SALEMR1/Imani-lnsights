@@ -13,7 +13,7 @@
 
 /* تم إزالة تأثير الخلفية المتحركة للقسم */
 
-/* تأثير الموجات في خلفية القسم */
+/* تأثير الموجات في خلفية القسم - تم إزالة الحركة */
 .features::before {
     content: '';
     position: absolute;
@@ -25,27 +25,14 @@
         rgba(0, 87, 61, 0.05) 0%, 
         rgba(13, 58, 101, 0.05) 50%, 
         rgba(138, 110, 39, 0.05) 100%);
-    background-size: 200% 200%;
-    animation: pulseBackground 10s ease infinite;
+    background-size: 150% 150%;
+    opacity: 0.7;
     z-index: 0;
 }
 
-@keyframes pulseBackground {
-    0% {
-        background-size: 100% 100%;
-        opacity: 0.5;
-    }
-    50% {
-        background-size: 150% 150%;
-        opacity: 0.8;
-    }
-    100% {
-        background-size: 100% 100%;
-        opacity: 0.5;
-    }
-}
+/* تم إزالة تأثير pulseBackground */
 
-/* تأثير الضوء المتحرك في خلفية القسم */
+/* تأثير الضوء المتحرك في خلفية القسم - تم إزالة الحركة */
 .features::after {
     content: '';
     position: absolute;
@@ -57,18 +44,10 @@
         rgba(255, 255, 255, 0.1) 0%, 
         transparent 60%);
     opacity: 0.5;
-    animation: rotateLight 20s linear infinite;
     z-index: 0;
 }
 
-@keyframes rotateLight {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
+/* تم إزالة تأثير rotateLight */
 
 /* شبكة المميزات */
 .features-grid {
@@ -79,7 +58,7 @@
     z-index: 1;
 }
 
-/* بطاقات المميزات المحسنة */
+/* بطاقات المميزات المحسنة - تم إزالة الحركة */
 .feature-card {
     position: relative;
     padding: 2.5rem 2rem;
@@ -89,127 +68,56 @@
     -webkit-backdrop-filter: blur(10px);
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 87, 61, 0.1);
-    transition: transform 0.4s ease;
     overflow: hidden;
     z-index: 1;
     border: 1px solid rgba(0, 87, 61, 0.1);
     cursor: pointer;
 }
 
-/* تم إزالة تأثير حركة الخلفية */
+/* تأثير الموجة في خلفية البطاقة - تم إزالة الحركة */
+.feature-card .wave-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to top, 
+        rgba(var(--primary-rgb), 0.1) 0%, 
+        rgba(var(--primary-rgb), 0.05) 40%, 
+        rgba(var(--primary-rgb), 0) 100%);
+    z-index: -1;
+}
 
-/* تم إزالة تأثير نبض البطاقة */
-
-/* الإطار المضيء - ثابت */
-.feature-card::before {
-    content: '';
+/* تأثير الضوء في البطاقة - تم إزالة الحركة */
+.feature-card .light-effect {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, 
-        rgba(0, 87, 61, 0.03) 0%,
-        rgba(13, 58, 101, 0.05) 100%);
+    background: radial-gradient(circle at 70% 30%, 
+        rgba(255, 255, 255, 0.7) 0%, 
+        rgba(255, 255, 255, 0) 70%);
+    opacity: 0.5;
     z-index: -1;
-}
-
-/* الحدود الثابتة */
-.feature-card::after {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(135deg, 
-        #00573d 0%, 
-        #0d3a65 100%);
-    z-index: -2;
-    border-radius: 16px;
-    opacity: 0.2;
-}
-
-/* تم إزالة تأثير الظهور والاختفاء للألوان */
-
-.feature-card:hover {
-    transform: translateY(-10px);
 }
 
 /* أيقونة المميزة */
 .feature-card i {
     font-size: 3rem;
+    color: var(--primary-color);
     margin-bottom: 1.5rem;
-    display: inline-block;
-    transition: transform 0.4s ease;
-    background: linear-gradient(135deg, #00573d, #0d3a65);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
-    animation: iconColorChange 7s ease infinite;
-}
-
-@keyframes iconColorChange {
-    0% {
-        background-position: 0% 50%;
-        filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
-    }
-    50% {
-        background-position: 100% 50%;
-        filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.2));
-    }
-    100% {
-        background-position: 0% 50%;
-        filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
-    }
-}
-
-.feature-card:hover i {
-    transform: scale(1.1) rotate(5deg);
+    position: relative;
+    z-index: 1;
 }
 
 /* عنوان المميزة */
 .feature-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #0d3a65;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    color: var(--heading-color);
     position: relative;
-    display: inline-block;
-}
-
-.feature-card h3::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50%;
-    height: 3px;
-    background: linear-gradient(to right, #00573d, #8a6e27);
-    border-radius: 2px;
-    animation: borderPulse 4s ease infinite;
-}
-
-@keyframes borderPulse {
-    0% {
-        opacity: 0.5;
-        width: 30%;
-    }
-    50% {
-        opacity: 1;
-        width: 70%;
-    }
-    100% {
-        opacity: 0.5;
-        width: 30%;
-    }
-}
-
-.feature-card:hover h3::after {
-    width: 80%;
+    z-index: 1;
 }
 
 /* وصف المميزة */
@@ -217,15 +125,12 @@
     color: var(--text-color);
     line-height: 1.7;
     margin-bottom: 1rem;
-    transition: all 0.3s ease;
-}
-
-.feature-card:hover p {
-    color: var(--text-color-dark);
+    position: relative;
+    z-index: 1;
 }
 
 /* رابط المميزة */
-.feature-link {
+.feature-card .feature-link {
     position: absolute;
     top: 0;
     left: 0;
@@ -234,82 +139,12 @@
     z-index: 2;
 }
 
-/* تأثير الضوء المتحرك */
-.feature-card .light-effect {
-    position: absolute;
-    top: 0;
-    left: -150%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.3) 50%,
-        transparent 100%
-    );
-    z-index: 2;
-    opacity: 0;
-    pointer-events: none;
-    animation: lightSweep 8s infinite ease-in-out;
-}
-
-@keyframes lightSweep {
-    0%, 100% {
-        left: -150%;
-        opacity: 0;
-    }
-    30% {
-        opacity: 0;
-    }
-    50% {
-        left: 150%;
-        opacity: 0.5;
-    }
-    70% {
-        opacity: 0;
-    }
-}
-
-/* تأثير الخلفية المتموجة */
-.feature-card .wave-bg {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, 
-        rgba(0, 87, 61, 0.1) 0%, 
-        rgba(13, 58, 101, 0.1) 50%, 
-        rgba(138, 110, 39, 0.1) 100%);
-    background-size: 300% 300%;
-    z-index: -1;
-    opacity: 1;
-    animation: waveGradient 10s infinite linear;
-}
-
-@keyframes waveGradient {
-    0% {
-        background-position: 0% 0%;
-        transform: translateY(0) scaleY(1);
-    }
-    25% {
-        transform: translateY(-5px) scaleY(1.05);
-    }
-    50% {
-        background-position: 100% 100%;
-        transform: translateY(0) scaleY(1);
-    }
-    75% {
-        transform: translateY(-5px) scaleY(1.05);
-    }
-    100% {
-        background-position: 0% 0%;
-        transform: translateY(0) scaleY(1);
-    }
-}
-
-/* تنسيقات للأجهزة المحمولة */
+/* تحسينات للأجهزة المحمولة */
 @media (max-width: 768px) {
+    .features {
+        padding: 60px 0;
+    }
+    
     .features-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         gap: 20px;
